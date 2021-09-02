@@ -26,11 +26,11 @@
                         @csrf
                         <div class="form-group">
                             <label for="email"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="email" name="email" id="username" placeholder="Email" autofocus value="{{ old('email') }}"/>
+                            <input type="email" name="email" id="username" placeholder="Email" autofocus value="{{ old('email') }}" required/>
                         </div>
                         <div class="form-group">
                             <label for="password"><i class="zmdi zmdi-lock"></i></label>
-                            <input type="password" name="password" id="password" placeholder="Password"/>
+                            <input type="password" name="password" id="password" placeholder="Password" required/>
                         </div>
                         {{-- <div class="form-group">
                             <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
