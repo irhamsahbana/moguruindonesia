@@ -40,7 +40,7 @@
         <br>
         <button class="btn btn-bold btn-block btn-primary btn-rounded" type="submit">Daftar</button>
       </form>
-      <div class="divider">Atau Daftar Dengan</div>
+      <div class="divider">Atau daftar dengan</div>
       <div class="text-center">
         <a class="btn btn-square btn-google" href="#"><i class="fa fa-google"></i></a>
       </div>

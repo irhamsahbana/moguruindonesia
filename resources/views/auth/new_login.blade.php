@@ -33,7 +33,7 @@
         </div>
       </form>
 
-      <div class="divider">Masuk Menggunakan</div>
+      <div class="divider">Masuk dengan</div>
       <div class="text-center">
         <a class="btn btn-square btn-google" href="#"><i class="fa fa-google"></i></a>
       </div>
