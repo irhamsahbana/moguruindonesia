@@ -10,8 +10,8 @@
 
       <form class="form-type-material">
         <div class="form-group">
-          <input type="text" class="form-control" id="username" name="username">
-          <label for="username">Email</label>
+          <input type="text" class="form-control" id="email" name="email" autofocus value="{{ old('email') }}">
+          <label for="email">Email</label>
         </div>
 
         <div class="form-group">
@@ -35,7 +35,7 @@
 
       <div class="divider">Masuk Menggunakan</div>
       <div class="text-center">
-        <a class="btn btn-square btn-google" href="#"><i class="fa fa-google"></i></a>
+        <a class="btn btn-square btn-google" href="{{ route('auth.google') }}"><i class="fa fa-google"></i></a>
       </div>
     </div>
     <p class="text-center text-muted fs-13 mt-20">Belum Punya Akun? <a class="text-primary fw-500" href="#">Daftar sekarang</a></p>

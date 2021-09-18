@@ -9,31 +9,41 @@
       <!-- <h5 class="text-uppercase">Create an account</h5> -->
       <br>
 
-      <form class="form-type-material">
+      <form class="form-type-material" action="{{ route('auth.register.user') }}">
         <div class="form-group">
-          <input type="text" class="form-control" id="username">
-          <label for="username">Nama</label>
+          <input type="text" class="form-control" id="first_name" value="{{ old('first_name') }}" name="first_name">
+          <label for="first_name">Nama Depan</label>
         </div>
 
         <div class="form-group">
-          <input type="text" class="form-control" id="email">
+          <input type="text" class="form-control" id="last_name" value="{{ old('last_name') }}" name="last_name">
+          <label for="last_name">Nama Belakang</label>
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control" id="email" value="{{ old('email') }}" name="email">
           <label for="email">Email</label>
         </div>
 
         <div class="form-group">
-          <input type="password" class="form-control" id="password">
+          <input type="text" class="form-control" id="phone" value="{{ old('phone') }}" name="phone">
+          <label for="phone">Nomor HP</label>
+        </div>
+
+        <div class="form-group">
+          <input type="password" class="form-control" id="password" >
           <label for="password">Password</label>
         </div>
 
         <div class="form-group">
-          <input type="password" class="form-control" id="password-conf">
-          <label for="password-conf">Konfirmasi Password</label>
+          <input type="password" class="form-control" id="password_confirmation">
+          <label for="password_confirmation">Konfirmasi Password</label>
         </div>
 
         <div class="form-group">
           <div class="custom-control custom-checkbox">
             <input type="checkbox" class="custom-control-input">
-            <label class="custom-control-label">Setuju dengan semua  <a class="text-primary" href="#">ketentuan</a></label>
+            <label class="custom-control-label">Dengan mendaftar anda setuju dengan semua <a class="text-primary" href="#">ketentuan</a></label>.
           </div>
         </div>
 
@@ -42,10 +52,10 @@
       </form>
       <div class="divider">Atau Daftar Dengan</div>
       <div class="text-center">
-        <a class="btn btn-square btn-google" href="#"><i class="fa fa-google"></i></a>
+        <a class="btn btn-square btn-google" href="{{ route('auth.google') }}"><i class="fa fa-google"></i></a>
       </div>
     </div>
-    <p class="text-center text-muted fs-13 mt-20">Sudah Punya Akun? <a class="text-primary fw-500" href="#">Masuk</a></p>
+    <p class="text-center text-muted fs-13 mt-20">Sudah Punya Akun? <a class="text-primary fw-500" href="{{ route('auth.login') }}">Masuk</a></p>
   </div>
 
 
