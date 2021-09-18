@@ -6,11 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Moguru Indonesia</title>
 
-    <!-- Font Icon -->
-    <link rel="stylesheet" href="{{ asset('assets/auth') }}/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <script src="https://kit.fontawesome.com/d39d4d11c2.js" crossorigin="anonymous"></script>
 
     <!-- Main css -->
     <link rel="stylesheet" href="{{ asset('assets/auth') }}/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{{ asset('assets/auth') }}/fonts/material-icon/css/material-design-iconic-font.min.css">
 </head>
 <body>
     @yield('content')
