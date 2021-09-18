@@ -21,5 +21,8 @@ Route::get('login', [AuthController::class, 'login'])->name('auth.login');
 Route::get('coba-login', function () {
     return view('auth.new_login');
 });
+Route::get('register', function () {
+    return view('auth.register');
+});
 Route::get('auth/google', [AuthController::class, 'redirectToGoogle'])->name('auth.google');
 Route::get('auth/google/callback', [AuthController::class, 'handleGoogleCallback'])->name('auth.google.callback');

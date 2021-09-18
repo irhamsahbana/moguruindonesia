@@ -2,31 +2,10 @@
 body{
     background-color: #f6f8fb;
 }
-.header-container{
-    min-height: 90vh;
-    width: 100%;
+.rounded-corner{
+  border-radius: 20px;
 }
 
-/* Login and register form */
-.auth-section{
-    /* background-color: aqua; */
-    padding: 115px 100px 50px 100px;
-    min-height: 90vh;
-    width: 100%;
-}
-.auth-card{
-    background-color: white;
-    border-radius: 20px;
-    padding: 20px;
-    width: 100%;
-}
-.left-side{
-    background-color: purple;
-    height: 400px;
-    width: 100%;
-}
-.right-side{
-    background-color: aqua;
-    height: 400px;
-    width: 100%;
+.btn-rounded{
+  border-radius: 12px;
 }
