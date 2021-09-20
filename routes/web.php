@@ -25,13 +25,17 @@ Route::post('register/user', [AuthController::class, 'registerUser'])->name('aut
 Route::get('auth/google', [AuthController::class, 'redirectToGoogle'])->name('auth.google');
 Route::get('auth/google/callback', [AuthController::class, 'handleGoogleCallback'])->name('auth.google.callback');
 
+Route::get('welcome', function () {
+    return view('customer.first_page');
+});
+
 
 // domain.test => landing page & homepage users customer
 // domain.test => landing page & homepage users tutor
 
 // domain.test/fname-lname-xxx => profile users tutor dan cust
 // domain.test/admin/ => profile users admin
-// domain.test/order/presence => 
+// domain.test/order/presence =>
 
 //done
 // Route::get('coba-login', function () {
