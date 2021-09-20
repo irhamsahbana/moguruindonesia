@@ -12,11 +12,13 @@
         <div class="form-group">
           <input type="text" class="form-control" id="email" name="email" autofocus value="{{ old('email') }}">
           <label for="email">Email</label>
+          <p class="error-msg">email yang anda masukan tidak terdaftar</p>
         </div>
 
         <div class="form-group">
           <input type="password" class="form-control" id="password" name="password">
           <label for="password">Password</label>
+          <p class="error-msg">password yang anda masukkan salah</p>
         </div>
 
         <div class="form-group flexbox flex-column flex-md-row">
