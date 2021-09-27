@@ -28,6 +28,9 @@ Route::get('auth/google/callback', [AuthController::class, 'handleGoogleCallback
 Route::get('welcome', function () {
     return view('customer.first_page');
 });
+Route::get('profile', function () {
+    return view('customer.profile_page');
+});
 
 
 // domain.test => landing page & homepage users customer

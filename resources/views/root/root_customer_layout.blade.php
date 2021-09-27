@@ -19,8 +19,9 @@
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="{{ asset('assets/vendors') }}/admin/theme/src/assets/img/apple-touch-icon.png">
     <link rel="icon" href="{{ asset('assets/vendors') }}/admin/theme/src/assets/img/favicon.png">
-  <style type="text/css">/* Chart.js */
-  @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
+    <style type="text/css">/* Chart.js */
+    @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
   </head>
   <body>
 
@@ -51,10 +52,10 @@
           <p class="nav-item"> <a class="nav-link" href="#"> Tutor Dashboard</a> </p>
           <p class="nav-item"> <a class="nav-link" href="#"> Katalog Tutor</a> </p>
 
-          <form class="lookup lookup-right search-bar" action="index.html" method="post">
+          <!-- <form class="lookup lookup-right search-bar" action="index.html" method="post">
             <input class="search-input" type="text" name="" value="" placeholder="lokasi anda" style="width:40%;">
             <input class="search-input" type="text" name="" value="" placeholder="Kursus" style="width:60%;">
-          </form>
+          </form> -->
 
 
 

@@ -1,11 +1,14 @@
 
 body{
     background-color: #f6f8fb;
+    /* background-color: gray; */
 }
 .rounded-corner{
   border-radius: 20px;
 }
-
+.bg-white{
+  background-color: white;
+}
 .btn-rounded{
   border-radius: 12px;
 }
@@ -15,15 +18,116 @@ body{
   margin-bottom: 0;
 }
 
-.search-bar{
-  background-color: #f0f0f0;
-  border-radius: 50px;
-  padding: 5px;
-  width: 60%;
+/* after login page */
+.inner-container{
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-.search-input{
-  background-color: #f0f0f0;
+.inner-container h1{
+  font-weight: 700;
+}
+.inner-container h4{
+  font-weight:400;
+}
+.lookup-right::before{
+  display: none;
+}
+.page-container{
+  min-height: 100vh;
+  padding: 50px 0 0 0;
+  width: 100%;
+}
+.search-container{
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+}
+.image-container{
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  width: 100%;
+}
+.search-bar{
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 5px;
+  width: 100%;
+}
+.search-btn{
+  background-color: #00b899;
+  border-radius: 100%;
   border: none;
-  padding: 0 5px 0 5px;
+  padding: 20px;
+  position: absolute;
+  right: 6px;
+  z-index: 2;
+}
+.search-btn img{
+  height: 30px;
+  width: auto;
+
+}
+.tagline{
+  height: 400px;
+  padding-top: 100px;
+  width: 100%;
+}
+/* end of after login page */
+
+/* profile page for customer */
+.capsule{
+  background-color: #f6f8fb;
+  border-radius: 10px;
+  font-weight: bold;
+  height: auto;
+  margin-bottom: 5px;
+  padding: 7px;
   width: auto;
 }
+.profile-desc{
+  height: auto;
+  width: 100%;
+}
+.profile-desc p{
+  text-align: justify;
+}
+.profile-info ul{
+  padding: 0;
+}
+.profile-info ul li{
+  display: inline-block;
+  list-style-type: none;
+}
+.profile-pict{
+  height: 100%;
+  width: 100%;
+}
+.profile-pict .btn{
+  display: block;
+  margin: auto;
+}
+.profile-pict img{
+  height: auto;
+  width: 100%;
+}
+.profile-pict h4{
+  text-align: center;
+}
+.profile-pict h5{
+  text-align: center;
+}
+
+.profile-section{
+  padding: 30px 0 0 0;
+}
+.profile-section h4{
+  font-weight: bold;
+}
+
+/* end of profile page for customer */
