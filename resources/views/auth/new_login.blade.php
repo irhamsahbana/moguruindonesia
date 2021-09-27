@@ -3,12 +3,22 @@
 @section('content')
 <div class="row min-h-fullscreen center-vh p-20 m-0">
   <div class="col-12">
+    @if ($errors->any())
+      <div class="error_msgs">
+          <ul>
+              @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+      </div>
+    @endif
     <div class="card card-shadowed px-50 py-30 w-400px mx-auto rounded-corner" style="max-width: 100%">
       <img src="{{ asset('assets/img') }}/brand/brand-logo.png" alt="" width="250" height="auto" style="margin-left:auto; margin-right:auto;">
       <!-- <h5 class="text-uppercase"style="margin-left:auto; margin-right:auto; margin-top:20px; color:#33cabb;">MASUK</h5> -->
       <br>
 
-      <form class="form-type-material">
+      <form class="form-type-material" action="{{ route('auth.login.user') }}" method="POST">
+        @csrf
         <div class="form-group">
           <input type="text" class="form-control" id="email" name="email" autofocus value="{{ old('email') }}">
           <label for="email">Email</label>
