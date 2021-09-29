@@ -17,7 +17,6 @@ body{
   color: red;
   margin-bottom: 0;
 }
-
 /* after login page */
 .inner-container{
   min-height: 90vh;
@@ -51,6 +50,14 @@ body{
   justify-content: center;
   height: 400px;
   width: 100%;
+}
+.min-width-200px-center{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  min-width: 200px;
+  max-width: 600px;
 }
 .search-bar{
   background-color: white;
@@ -129,5 +136,18 @@ body{
 .profile-section h4{
   font-weight: bold;
 }
-
 /* end of profile page for customer */
+
+/* tutor catalog */
+.tutor-name{
+  margin-top: 10px;
+}
+.tutor-rate{
+  display: flex;
+  justify-content: flex-start;
+}
+.tutor-rate .material-icons{
+  color: orange;
+  font-size: 15pt;
+}
+/* end of tutor catalog */

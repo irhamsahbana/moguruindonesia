@@ -32,6 +32,9 @@ Route::get('welcome', function () {
 Route::get('profile', function () {
     return view('customer.profile_page');
 });
+Route::get('tutor-catalog', function () {
+    return view('customer.tutor_catalog');
+});
 
 
 // domain.test => landing page & homepage users customer
