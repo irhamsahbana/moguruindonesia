@@ -22,6 +22,7 @@
               </span>
               <p>5.0 (100 Ulasan)</p>
             </div>
+            <h6>Rp. 30.000 / Sesi</h6>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             <a class="btn btn-round btn-primary" href="#">Lihat Profil</a>
 
@@ -39,6 +40,7 @@
               </span>
               <p>5.0 (100 Ulasan)</p>
             </div>
+            <h6>Rp. 30.000 / Sesi</h6>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             <a class="btn btn-round btn-primary" href="#">Lihat Profil</a>
 
@@ -56,6 +58,7 @@
               </span>
               <p>5.0 (100 Ulasan)</p>
             </div>
+            <h6>Rp. 30.000 / Sesi</h6>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             <a class="btn btn-round btn-primary" href="#">Lihat Profil</a>
 
@@ -73,6 +76,7 @@
               </span>
               <p>5.0 (100 Ulasan)</p>
             </div>
+            <h6>Rp. 30.000 / Sesi</h6>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             <a class="btn btn-round btn-primary" href="#">Lihat Profil</a>
 

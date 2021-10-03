@@ -113,7 +113,7 @@
                         <th>Nama Tutor</th>
                         <th>Kursus</th>
                         <th>Absen</th>
-                        <th> - </th>
+                        <th> Detail </th>
                       </tr>
                     </thead>
                     <tbody>
@@ -145,7 +145,7 @@
                           <th>Nama Tutor</th>
                           <th>Kursus</th>
                           <th>Status</th>
-                          <th> - </th>
+                          <th> Detail </th>
                         </tr>
                       </thead>
                       <tbody>
@@ -154,6 +154,13 @@
                           <td>Jajang</td>
                           <td>Matematika</td>
                           <td>Menunggu Pembayaran</td>
+                          <td> <a href="#">Lihat Detail</a></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mbappe</td>
+                          <td>Matematika</td>
+                          <td>Menunggu Tutor</td>
                           <td> <a href="#">Lihat Detail</a></td>
                         </tr>
                       </tbody>
@@ -175,7 +182,7 @@
                         <th>Nama Tutor</th>
                         <th>Kursus</th>
                         <th>Status</th>
-                        <th> - </th>
+                        <th> Detail </th>
                       </tr>
                     </thead>
                     <tbody>

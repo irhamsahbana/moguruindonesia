@@ -35,6 +35,39 @@ Route::get('profile', function () {
 Route::get('tutor-catalog', function () {
     return view('customer.tutor_catalog');
 });
+Route::get('reservation', function () {
+    return view('customer.reservation_page');
+});
+Route::get('payment-method', function () {
+    return view('customer.payment_method');
+});
+Route::get('checkout', function () {
+    return view('customer.checkout');
+});
+Route::get('payment', function () {
+    return view('customer.payment');
+});
+Route::get('payment-success', function () {
+    return view('customer.payment_success');
+});
+Route::get('absen', function () {
+    return view('customer.absen_for_customer');
+});
+Route::get('step1', function () {
+    return view('upgrade.step1');
+});
+Route::get('step2', function () {
+    return view('upgrade.step2');
+});
+Route::get('step3', function () {
+    return view('upgrade.step3');
+});
+Route::get('step4', function () {
+    return view('upgrade.step4');
+});
+Route::get('upgrade-success', function () {
+    return view('upgrade.upgrade_success');
+});
 
 
 // domain.test => landing page & homepage users customer

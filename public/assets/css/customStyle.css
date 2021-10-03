@@ -17,6 +17,10 @@ body{
   color: red;
   margin-bottom: 0;
 }
+.w-100{
+  margin:30px 0 0 0;
+  width:100%;
+}
 /* after login page */
 .inner-container{
   min-height: 90vh;
@@ -151,3 +155,52 @@ body{
   font-size: 15pt;
 }
 /* end of tutor catalog */
+
+/* reservasi */
+.payment ul{
+  padding: 0;
+}
+.payment ul li{
+  list-style-type: none;
+}
+.progress-bar-section{
+  background-color: white;
+  border-radius: 20px;
+  height: auto;
+  margin: 30px 0 30px 0;
+  width: 100%;
+}
+.radio-btn{
+  margin: 18px 0 0 0;
+  position: absolute;
+  right: 0;
+}
+/* end of reservasi */
+.absen h5, p{
+  margin: 0;
+}
+.absen-list .btn{
+  position: absolute;
+  bottom: 30px;
+  right: 15px;
+}
+
+/* upgrade to tutor */
+.course-list{
+  height: 360px;
+  margin: 0 0 0 0;
+  overflow: scroll;
+}
+.course-item{
+  background-color: #f0f0f0;
+  height: auto;
+  margin: 0 0 10px 0;
+  padding: 20px 20px 10px 20px;
+  width: 100%;
+}
+
+.course-item .course-check{
+  margin-top: 7px;
+  float: right;
+}
+/* end of upgrade to tutor */
