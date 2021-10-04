@@ -26,13 +26,56 @@ Route::get('logout', [AuthController::class, 'logout'])->name('auth.logout');
 Route::get('auth/google', [AuthController::class, 'redirectToGoogle'])->name('auth.google');
 Route::get('auth/google/callback', [AuthController::class, 'handleGoogleCallback'])->name('auth.google.callback');
 
+Route::get('welcome', function () {
+    return view('customer.first_page');
+});
+Route::get('profile', function () {
+    return view('customer.profile_page');
+});
+Route::get('tutor-catalog', function () {
+    return view('customer.tutor_catalog');
+});
+Route::get('reservation', function () {
+    return view('customer.reservation_page');
+});
+Route::get('payment-method', function () {
+    return view('customer.payment_method');
+});
+Route::get('checkout', function () {
+    return view('customer.checkout');
+});
+Route::get('payment', function () {
+    return view('customer.payment');
+});
+Route::get('payment-success', function () {
+    return view('customer.payment_success');
+});
+Route::get('absen', function () {
+    return view('customer.absen_for_customer');
+});
+Route::get('step1', function () {
+    return view('upgrade.step1');
+});
+Route::get('step2', function () {
+    return view('upgrade.step2');
+});
+Route::get('step3', function () {
+    return view('upgrade.step3');
+});
+Route::get('step4', function () {
+    return view('upgrade.step4');
+});
+Route::get('upgrade-success', function () {
+    return view('upgrade.upgrade_success');
+});
+
 
 // domain.test => landing page & homepage users customer
 // domain.test => landing page & homepage users tutor
 
 // domain.test/fname-lname-xxx => profile users tutor dan cust
 // domain.test/admin/ => profile users admin
-// domain.test/order/presence => 
+// domain.test/order/presence =>
 
 //done
 // Route::get('coba-login', function () {

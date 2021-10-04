@@ -13,37 +13,45 @@
         <div class="form-group">
           <input type="text" class="form-control" id="first_name" value="{{ old('first_name') }}" name="first_name">
           <label for="first_name">Nama Depan</label>
+          <p class="error-msg">Nama depan tidak boleh kosong</p>
         </div>
 
         <div class="form-group">
           <input type="text" class="form-control" id="last_name" value="{{ old('last_name') }}" name="last_name">
           <label for="last_name">Nama Belakang</label>
+          <!-- <p class="error-msg">kolom ini tidak boleh kosong</p> -->
         </div>
 
         <div class="form-group">
           <input type="text" class="form-control" id="email" value="{{ old('email') }}" name="email">
           <label for="email">Email</label>
+          <p class="error-msg">email tidak boleh kosong</p>
         </div>
 
         <div class="form-group">
           <input type="text" class="form-control" id="phone" value="{{ old('phone') }}" name="phone">
           <label for="phone">Nomor HP</label>
+          <!-- <p class="error-msg">kolom ini tidak boleh kosong</p> -->
         </div>
 
         <div class="form-group">
           <input type="password" class="form-control" id="password" >
           <label for="password">Password</label>
+          <p class="error-msg">password tidak boleh kosong</p>
+          <p class="error-msg">password harus berisi minimal 6 karakter huruf dan angka</p>
         </div>
 
         <div class="form-group">
           <input type="password" class="form-control" id="password_confirmation">
           <label for="password_confirmation">Konfirmasi Password</label>
+          <p class="error-msg">kolom ini tidak boleh kosong</p>
+          <p class="error-msg">password yang anda masukkan salah</p>
         </div>
 
         <div class="form-group">
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input">
-            <label class="custom-control-label">Dengan mendaftar anda setuju dengan semua <a class="text-primary" href="#">ketentuan</a></label>.
+            <p class="custom-control-label"> <input type="checkbox"> Dengan mendaftar anda setuju dengan semua <a class="text-primary" href="#" style="margin-left: 16px;">ketentuan</a></p>
+
           </div>
         </div>
 

@@ -1,11 +1,206 @@
 
 body{
     background-color: #f6f8fb;
+    /* background-color: gray; */
 }
 .rounded-corner{
   border-radius: 20px;
 }
-
+.bg-white{
+  background-color: white;
+}
 .btn-rounded{
   border-radius: 12px;
 }
+
+.error-msg{
+  color: red;
+  margin-bottom: 0;
+}
+.w-100{
+  margin:30px 0 0 0;
+  width:100%;
+}
+/* after login page */
+.inner-container{
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.inner-container h1{
+  font-weight: 700;
+}
+.inner-container h4{
+  font-weight:400;
+}
+.lookup-right::before{
+  display: none;
+}
+.page-container{
+  min-height: 100vh;
+  padding: 50px 0 0 0;
+  width: 100%;
+}
+.search-container{
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+}
+.image-container{
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  width: 100%;
+}
+.min-width-200px-center{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  min-width: 200px;
+  max-width: 600px;
+}
+.search-bar{
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 5px;
+  width: 100%;
+}
+.search-btn{
+  background-color: #00b899;
+  border-radius: 100%;
+  border: none;
+  padding: 20px;
+  position: absolute;
+  right: 6px;
+  z-index: 2;
+}
+.search-btn img{
+  height: 30px;
+  width: auto;
+
+}
+.tagline{
+  height: 400px;
+  padding-top: 100px;
+  width: 100%;
+}
+/* end of after login page */
+
+/* profile page for customer */
+.capsule{
+  background-color: #f6f8fb;
+  border-radius: 10px;
+  font-weight: bold;
+  height: auto;
+  margin-bottom: 5px;
+  padding: 7px;
+  width: auto;
+}
+.profile-desc{
+  height: auto;
+  width: 100%;
+}
+.profile-desc p{
+  text-align: justify;
+}
+.profile-info ul{
+  padding: 0;
+}
+.profile-info ul li{
+  display: inline-block;
+  list-style-type: none;
+}
+.profile-pict{
+  height: 100%;
+  width: 100%;
+}
+.profile-pict .btn{
+  display: block;
+  margin: auto;
+}
+.profile-pict img{
+  height: auto;
+  width: 100%;
+}
+.profile-pict h4{
+  text-align: center;
+}
+.profile-pict h5{
+  text-align: center;
+}
+
+.profile-section{
+  padding: 30px 0 0 0;
+}
+.profile-section h4{
+  font-weight: bold;
+}
+/* end of profile page for customer */
+
+/* tutor catalog */
+.tutor-name{
+  margin-top: 10px;
+}
+.tutor-rate{
+  display: flex;
+  justify-content: flex-start;
+}
+.tutor-rate .material-icons{
+  color: orange;
+  font-size: 15pt;
+}
+/* end of tutor catalog */
+
+/* reservasi */
+.payment ul{
+  padding: 0;
+}
+.payment ul li{
+  list-style-type: none;
+}
+.progress-bar-section{
+  background-color: white;
+  border-radius: 20px;
+  height: auto;
+  margin: 30px 0 30px 0;
+  width: 100%;
+}
+.radio-btn{
+  margin: 18px 0 0 0;
+  position: absolute;
+  right: 0;
+}
+/* end of reservasi */
+.absen h5, p{
+  margin: 0;
+}
+.absen-list .btn{
+  position: absolute;
+  bottom: 30px;
+  right: 15px;
+}
+
+/* upgrade to tutor */
+.course-list{
+  height: 360px;
+  margin: 0 0 0 0;
+  overflow: scroll;
+}
+.course-item{
+  background-color: #f0f0f0;
+  height: auto;
+  margin: 0 0 10px 0;
+  padding: 20px 20px 10px 20px;
+  width: 100%;
+}
+
+.course-item .course-check{
+  margin-top: 7px;
+  float: right;
+}
+/* end of upgrade to tutor */
