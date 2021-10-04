@@ -19,24 +19,23 @@
           </a>
         </li>
 
-        <li class="nav-item complete">
+        <li class="nav-item">
           <a class="nav-link" href="#">
-            <span class="nav-link-number"><i class="ti-check"></i></span>
-            <span class="nav-title">Checkout</span>
-          </a>
-        </li>
-        <li class="nav-item complete">
-          <a class="nav-link" href="#">
-            <span class="nav-link-number"><i class="ti-check"></i></span>
-            <span class="nav-title">Konfirmasi Tutor</span>
+            <span class="nav-link-number">3</span>
+            <span class="nav-title">Ringkasan dan Checkout</span>
           </a>
         </li>
 
-
-        <li class="nav-item complete">
+        <li class="nav-item">
           <a class="nav-link" href="#">
-            <span class="nav-link-number"><i class="ti-check"></i></span>
+            <span class="nav-link-number">4</span>
             <span class="nav-title">Pembayaran</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span class="nav-link-number">5</span>
+            <span class="nav-title">Pembayaran Berhasil</span>
           </a>
         </li>
       </ul>

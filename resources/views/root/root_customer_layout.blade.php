@@ -49,7 +49,7 @@
             </li>
           </ul>
 
-          <p class="nav-item"> <a class="nav-link" href="#"> Tutor Dashboard</a> </p>
+          <p class="nav-item"> <a class="nav-link" href="#"> My Dashboard</a> </p>
           <p class="nav-item"> <a class="nav-link" href="#"> Katalog Tutor</a> </p>
 
           <!-- <form class="lookup lookup-right search-bar" action="index.html" method="post">

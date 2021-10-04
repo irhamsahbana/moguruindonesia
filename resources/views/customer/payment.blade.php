@@ -25,18 +25,17 @@
             <span class="nav-title">Ringkasan dan Checkout</span>
           </a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="#">
             <span class="nav-link-number">4</span>
-            <span class="nav-title">Menunggu Konfirmasi Tutor</span>
+            <span class="nav-title">Pembayaran</span>
           </a>
         </li>
-
-
         <li class="nav-item">
           <a class="nav-link" href="#">
             <span class="nav-link-number">5</span>
-            <span class="nav-title">Pembayaran</span>
+            <span class="nav-title">Pembayaran Berhasil</span>
           </a>
         </li>
       </ul>

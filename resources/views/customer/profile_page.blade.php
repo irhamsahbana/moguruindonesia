@@ -13,7 +13,7 @@
               <h4>Bambang Pamungkas</h4>
               <h5>Mahasiswa</h5>
               <a class="btn btn-round btn-primary" href="#"> Reservasi Kursus </a>
-              <!-- <a class="btn btn-round btn-primary" href="#"> Dashboard Saya </a> -->
+              <!-- <a class="btn btn-round btn-primary" data-toggle="modal" data-target="#exampleModal" href="#"> Edit Profile </a> -->
             </div>
 
           </div>
@@ -237,6 +237,31 @@
 
       </div>
 
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Isi absensi untuk hari ini</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body form-type-round">
+            <form class="form-group" action="index.html" method="post">
+              <input class="form-control" type="text" name="" value="" placeholder="Nama Depan">
+              <input class="form-control" type="text" name="" value="" placeholder="Nama Belakang">
+              <input class="form-control" type="text" name="" value="" placeholder="Alamat">
+              <input class="form-control" type="text" name="" value="" placeholder="Nomor HP">
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-round" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary btn-round">Save changes</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
