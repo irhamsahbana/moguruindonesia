@@ -95,8 +95,8 @@
             <input type="text" class="form-control" id="name" placeholder="Nama Lengkap">
             <label class="require" for="address">Alamat Belajar</label>
             <input type="text" class="form-control" id="address" placeholder="Alamat tempat belajar">
-            <label class="require" for="address">Nomor Handphone</label>
-            <input type="text" class="form-control" id="address" placeholder="Nomor yang bisa di hubungi">
+            <label class="require" for="phone">Nomor Handphone</label>
+            <input type="text" class="form-control" id="phone" placeholder="Nomor yang bisa di hubungi">
             <label for="other">Keterangan lainnya</label>
             <input type="text" class="form-control" id="other" placeholder="Contoh: mempunyai keterbatasan dalam ...">
 

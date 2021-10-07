@@ -44,11 +44,12 @@
                 <!-- <a class="dropdown-item" href="#"><i class="ti-settings"></i> Settings</a>
                 <a class="dropdown-item" href="#"><i class="ti-help"></i> Help</a> -->
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><i class="ti-power-off"></i> Logout</a>
+                <a class="dropdown-item" href="{{ route('auth.logout') }}"><i class="ti-power-off"></i> Logout</a>
               </div>
             </li>
           </ul>
 
+          <p class="nav-item"> <a class="nav-link" href="#"> {{ Auth::user()->first_name.' '.Auth::user()->last_name }}</a> </p>
           <p class="nav-item"> <a class="nav-link" href="#"> My Dashboard</a> </p>
           <p class="nav-item"> <a class="nav-link" href="#"> Katalog Tutor</a> </p>
 

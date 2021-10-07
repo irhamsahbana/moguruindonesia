@@ -26,9 +26,22 @@ Route::get('logout', [AuthController::class, 'logout'])->name('auth.logout');
 Route::get('auth/google', [AuthController::class, 'redirectToGoogle'])->name('auth.google');
 Route::get('auth/google/callback', [AuthController::class, 'handleGoogleCallback'])->name('auth.google.callback');
 
-Route::get('welcome', function () {
-    return view('customer.first_page');
+
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('welcome', function () {
+        return view('customer.first_page');
+    });
 });
+
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('verification-notice', function () {
+        return view('customer.first_page');
+    })->name('verification.notice');
+});
+
+
 Route::get('profile', function () {
     return view('customer.profile_page');
 });

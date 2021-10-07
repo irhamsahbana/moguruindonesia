@@ -18,20 +18,24 @@ class AuthController extends Controller
     }
 
     public function loginUser(Request $request)
-    {
+    {   
+        $message = [
+            'required' => 'kolom :attribute dibutuhkan.',
+            'email' => 'email tidak valid.'
+        ];
+
         $credentials = $request->validate([
             'email' => ['required', 'email:dns'],
             'password' => ['required'],
-        ]);
+        ], $message);
     
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-
-            return redirect()->intended('dashboard');
+            return redirect()->intended('welcome');
         }
 
         return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
+            'email' => 'Kredensial yang diberikan tidak cocok dengan catatan kami.',
         ]);
     }
 
@@ -48,20 +52,21 @@ class AuthController extends Controller
 
             if($findUser) {
                 Auth::login($findUser);
-                return redirect()->intended('dashboard');
+                return redirect()->intended('welcome');
             } else {
-
-                $token = Str::random(64);
                 $newUser = User::Create([
                     'first_name' => $user->user['given_name'],
                     'last_name' => $user->user['family_name'],
                     'email' => $user->getEmail(),
                     'email_verified_at' => Carbon::now(),
                     'google_id' => $user->getId(),
-                    'password' => Hash::make($token),
+                    'password' => 'not set',
                     'avatar'=> $user->getAvatar(),
                     'slug' => Str::lower($user->user['given_name'].'-'.$user->user['family_name'].'-'.Str::random(9)),
                 ]);
+
+                Auth::login($newUser);
+                return redirect()->intended('welcome');
             }
         } catch (Exception $e) {
             dd($e->getMessage());
