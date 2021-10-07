@@ -81,6 +81,9 @@ Route::get('step4', function () {
 Route::get('upgrade-success', function () {
     return view('upgrade.upgrade_success');
 });
+Route::get('register-success', function () {
+    return view('auth.register_success');
+});
 
 
 // domain.test => landing page & homepage users customer
