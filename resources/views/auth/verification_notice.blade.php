@@ -30,3 +30,12 @@
 </div>
 
 @endsection
+
+@section('scripts')
+<script type="text/javascript">
+  $(document).ready(function(){
+    app.toast('A basic toast using Javascript. It stays for 4 seconds.');
+    }
+  )
+</script>
+@endsection
