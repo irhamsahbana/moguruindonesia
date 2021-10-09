@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,30 +19,43 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('login', [AuthController::class, 'login'])->name('auth.login');
-Route::post('login/user', [AuthController::class, 'loginUser'])->name('auth.login.user');
-Route::get('register', [AuthController::class, 'register'])->name('auth.register');
-Route::post('register/user', [AuthController::class, 'registerUser'])->name('auth.register.user');
-Route::get('logout', [AuthController::class, 'logout'])->name('auth.logout');
+// for unauthenticate user (not login or authenticated)
+Route::middleware(['guest'])->group(function () {
+    Route::get('login', [AuthController::class, 'login'])->name('auth.login');
+    Route::post('login/user', [AuthController::class, 'loginUser'])->name('auth.login.user');
+    Route::get('register', [AuthController::class, 'register'])->name('auth.register');
+    Route::post('register/user', [AuthController::class, 'registerUser'])->name('auth.register.user');
+    
+    Route::get('auth/google', [AuthController::class, 'redirectToGoogle'])->name('auth.google');
+    Route::get('auth/google/callback', [AuthController::class, 'handleGoogleCallback'])->name('auth.google.callback');
+});
 
-Route::get('auth/google', [AuthController::class, 'redirectToGoogle'])->name('auth.google');
-Route::get('auth/google/callback', [AuthController::class, 'handleGoogleCallback'])->name('auth.google.callback');
-
-
+//for authenticated user
+Route::middleware(['auth'])->group(function () {
+    //only for user that unverified
+    Route::middleware(['unverified'])->group(function () {
+        Route::get('verification-notice', function () {
+            return view('auth.verification_notice');
+        })->name('verification.notice');
+        Route::get('verification-invalid', function () {
+            return view('auth.verification_token_invalid')->with(['f_msg' => 'OK']);
+        })->name('verification.invalid');
+        Route::get('send-confirm-email', [AuthController::class, 'confirmEmailSend'])->name('verification.send');
+    });
+    //for authenticated user only without more rules
+    Route::get('verification-success', function () {
+        return view('auth.verification_success');
+    })->name('verification.success');
+    Route::get('logout', [AuthController::class, 'logout'])->name('auth.logout');
+});
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('welcome', function () {
         return view('customer.first_page');
-    });
+    })->name('welcome');
 });
 
-
-Route::middleware(['auth'])->group(function () {
-    Route::get('verification-notice', function () {
-        return view('customer.first_page');
-    })->name('verification.notice');
-});
-
+Route::get('confirm-email/{token}', [AuthController::class, 'confirmEmail'])->name('verification.confirm');
 
 Route::get('profile', function () {
     return view('customer.profile_page');

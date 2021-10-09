@@ -7,6 +7,8 @@ use App\Models\User;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 Use Carbon\Carbon;
 
@@ -87,6 +89,17 @@ class AuthController extends Controller
             'phone' => 'required|numeric|unique:users,phone',
             'password' => 'required|min:8',
             'password_confirmation' => 'required|same:password'
+        ], [
+            'first_name.required' => 'Nama depan tidak boleh kosong.',
+            'last_name.required' => 'Nama belakang tidak boleh kosong.',
+            'email.required'=> 'Email tidak boleh kosong.',
+            'email.unique' => 'Email telah terdaftar.',
+            'phone.required' => 'Nomer handphone tidak boleh kosong.',
+            'phone.numeric' => 'Nomer handphone hanya boleh angka saja.',
+            'phone.unique' => 'Nomer handphone telah terdaftar.',
+            'password.required' => 'Password tidak boleh kosong.',
+            'password.min' => 'Password minimal 8 karakter.',
+            'password_confirmation.required' => 'Password konfirmasi tidak cocok.'  
         ]);
 
         $usr = new User;
@@ -98,9 +111,21 @@ class AuthController extends Controller
         $usr->password = Hash::make($request->password);
         $usr->save();
 
-        return redirect()->route('auth.login')->with([
-            'msgs' => 'succesfully!'
+        $token = Str::random(64);
+        DB::table('password_resets')->insert([
+            'email' => $request->email, 
+            'token' => $token, 
+            'created_at' => Carbon::now()
         ]);
+
+        Auth::login($usr);
+
+        Mail::send('email.confirm_email', ['token' => $token], function($message){
+            $message->to(Auth::user()->email);
+            $message->subject('Konfirmasi Email');
+        });
+
+        return redirect()->route('welcome');
     }
 
     public function logout()
@@ -108,5 +133,44 @@ class AuthController extends Controller
         Auth::logout();
         return redirect()->route('auth.login');
     }
+
+    public function confirmEmailSend() 
+    {
+        $token = Str::random(64);
+        DB::table('password_resets')->insert([
+            'email' => Auth::user()->email, 
+            'token' => $token, 
+            'created_at' => Carbon::now()
+        ]);
+
+        Mail::send('email.confirm_email', ['token' => $token], function($message){
+            $message->to(Auth::user()->email);
+            $message->subject('Konfirmasi Email');
+        });
+
+        return redirect()->route('verification.notice');
+    }
+
+    public function confirmEmail($token)
+    {
+        $email_confirm = DB::table('password_resets')->where('token', $token)->first();
+ 
+        if(!empty($email_confirm)){
+            DB::table('users')
+            ->where('email', $email_confirm->email)
+            ->update(['email_verified_at' => Carbon::now()]);
+
+            DB::table('password_resets')->where('email', $email_confirm->email)->delete();
+            $user = DB::table('users')->where('email', $email_confirm->email)->first();
+            $user = User::find($user->id);
+
+            Auth::login($user);
+            return redirect()->route('verification.success');
+        } else {
+            return redirect()->route('verification.invalid');
+        }
+    }
+
+    
 
 }

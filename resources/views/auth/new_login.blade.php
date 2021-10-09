@@ -4,14 +4,17 @@
 <div class="row min-h-fullscreen center-vh p-20 m-0">
   <div class="col-12">
     @if ($errors->any())
-    @foreach ($errors->all() as $error)
       <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Sepertinya ada yang salah yang salah.</strong> {{$error}}
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
+          <span aria-hidden="true">&times;</span>
         </button>
+        <strong>Sepertinya ada yang salah yang salah.</strong>
+        <ul>
+          @foreach ($errors->all() as $error)
+            <li>{{$error}}</li>
+          @endforeach
+        </ul>
       </div>
-    @endforeach
     @endif
 
     <div class="card card-shadowed px-50 py-30 w-400px mx-auto rounded-corner" style="max-width: 100%">
@@ -52,7 +55,7 @@
         <a class="btn btn-square btn-google" href="{{ route('auth.google') }}"><i class="fa fa-google"></i></a>
       </div>
     </div>
-    <p class="text-center text-muted fs-13 mt-20">Belum Punya Akun? <a class="text-primary fw-500" href="#">Daftar sekarang</a></p>
+    <p class="text-center text-muted fs-13 mt-20">Belum Punya Akun? <a class="text-primary fw-500" href="{{ route('auth.register') }}">Daftar sekarang</a></p>
   </div>
 
 
