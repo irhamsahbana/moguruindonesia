@@ -18,6 +18,8 @@ class CreateTutorDegreesTable extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('degree_id')->constrained()->onDelete('cascade');
             $table->timestamps();
+
+            $table->unique(["user_id", "degree_id"], 'tutor_degree_unique');
         });
     }
 

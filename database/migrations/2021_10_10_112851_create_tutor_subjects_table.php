@@ -18,6 +18,8 @@ class CreateTutorSubjectsTable extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('subject_id')->constrained()->onDelete('cascade');
             $table->timestamps();
+
+            $table->unique(["user_id", "subject_id"], 'tutor_subject_unique');
         });
     }
 
