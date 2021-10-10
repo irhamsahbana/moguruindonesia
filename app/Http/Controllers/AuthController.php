@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ManualRegisterRequest;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Laravel\Socialite\Facades\Socialite;
@@ -80,28 +81,8 @@ class AuthController extends Controller
         return view('auth.register');
     }
 
-    public function registerUser(Request $request)
+    public function registerUser(ManualRegisterRequest $request)
     {
-        $this->validate($request,[
-            'first_name' => 'required|max:255',
-            'last_name' => 'required|max:255',
-            'email' => 'required|email:dns|max:255|unique:users,email',
-            'phone' => 'required|numeric|unique:users,phone',
-            'password' => 'required|min:8',
-            'password_confirmation' => 'required|same:password'
-        ], [
-            'first_name.required' => 'Nama depan tidak boleh kosong.',
-            'last_name.required' => 'Nama belakang tidak boleh kosong.',
-            'email.required'=> 'Email tidak boleh kosong.',
-            'email.unique' => 'Email telah terdaftar.',
-            'phone.required' => 'Nomer handphone tidak boleh kosong.',
-            'phone.numeric' => 'Nomer handphone hanya boleh angka saja.',
-            'phone.unique' => 'Nomer handphone telah terdaftar.',
-            'password.required' => 'Password tidak boleh kosong.',
-            'password.min' => 'Password minimal 8 karakter.',
-            'password_confirmation.required' => 'Password konfirmasi tidak cocok.'  
-        ]);
-
         $usr = new User;
         $usr->first_name = $request->first_name;
         $usr->last_name = $request->last_name;

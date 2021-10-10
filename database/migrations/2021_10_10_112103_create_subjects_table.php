@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class DropColumnInUsersTable extends Migration
+class CreateSubjectsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class DropColumnInUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('username');
+        Schema::create('subjects', function (Blueprint $table) {
+            $table->id();
+            $table->string('subject_name');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ class DropColumnInUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('username')->unique()->after('last_name');
-        });
+        Schema::dropIfExists('subjects');
     }
 }

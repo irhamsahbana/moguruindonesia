@@ -18,7 +18,9 @@ class CreateUsersTable extends Migration
             $table->string('role')->default('customer');
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('username')->unique();
+            $table->enum('sex', ['L', 'P'])->nullable();
+            $table->date('dob')->nullable();
+            $table->string('google_id')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -26,13 +28,11 @@ class CreateUsersTable extends Migration
             $table->text('address')->nullable();
             $table->mediumInteger('city_id')->nullable();
             $table->text('avatar')->nullable();
-            $table->text('bio')->nullable();
             $table->string('slug')->nullable();
-            $table->mediumInteger('last_degree_id')->nullable();
-            $table->boolean('is_verified')->default(0);
-            $table->integer('fee_per_session')->nullable();
+            $table->boolean('is_verified_tutor')->default(0);
             $table->rememberToken();
             $table->timestamps();
+            
         });
     }
 

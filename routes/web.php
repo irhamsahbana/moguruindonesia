@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,72 +33,39 @@ Route::middleware(['guest'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     //only for user that unverified
     Route::middleware(['unverified'])->group(function () {
-        Route::get('verification-notice', function () {
-            return view('auth.verification_notice');
-        })->name('verification.notice');
+        Route::view('verification-notice', 'auth.verification_notice')->name('verification.notice');
         Route::get('verification-invalid', function () {
             return view('auth.verification_token_invalid')->with(['f_msg' => 'OK']);
         })->name('verification.invalid');
         Route::get('send-confirm-email', [AuthController::class, 'confirmEmailSend'])->name('verification.send');
     });
     //for authenticated user only without more rules
-    Route::get('verification-success', function () {
-        return view('auth.verification_success');
-    })->name('verification.success');
+    Route::view('verification-success','auth.verification_success')->name('verification.success');
     Route::get('logout', [AuthController::class, 'logout'])->name('auth.logout');
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('welcome', function () {
-        return view('customer.first_page');
-    })->name('welcome');
+    Route::view('welcome', 'customer.first_page')->name('welcome');
 });
 
 Route::get('confirm-email/{token}', [AuthController::class, 'confirmEmail'])->name('verification.confirm');
 
-Route::get('profile', function () {
-    return view('customer.profile_page');
-});
-Route::get('tutor-catalog', function () {
-    return view('customer.tutor_catalog');
-});
-Route::get('reservation', function () {
-    return view('customer.reservation_page');
-});
-Route::get('payment-method', function () {
-    return view('customer.payment_method');
-});
-Route::get('checkout', function () {
-    return view('customer.checkout');
-});
-Route::get('payment', function () {
-    return view('customer.payment');
-});
-Route::get('payment-success', function () {
-    return view('customer.payment_success');
-});
-Route::get('absen', function () {
-    return view('customer.absen_for_customer');
-});
-Route::get('step1', function () {
-    return view('upgrade.step1');
-});
-Route::get('step2', function () {
-    return view('upgrade.step2');
-});
-Route::get('step3', function () {
-    return view('upgrade.step3');
-});
-Route::get('step4', function () {
-    return view('upgrade.step4');
-});
-Route::get('upgrade-success', function () {
-    return view('upgrade.upgrade_success');
-});
-Route::get('register-success', function () {
-    return view('auth.register_success');
-});
+Route::view('profile', 'customer.profile_page');
+Route::view('tutor-catalog', 'customer.tutor_catalog');
+Route::view('reservation', 'customer.reservation_page');
+Route::view('payment-method', 'customer.payment_method');
+Route::view('checkout', 'customer.checkout');
+Route::view('payment', 'customer.payment');
+Route::view('payment-success', 'customer.payment-success');
+Route::view('absen', 'customer.absen_for_customer');
 
+Route::view('step1', 'upgrade.step1');
+Route::view('step2', 'upgrade.step2');
+Route::view('step3', 'upgrade.step3');
+Route::view('step4', 'upgrade.step4');
+Route::view('step4', 'upgrade.step4');
+Route::view('upgrade-success', 'upgrade.upgrade_success');
+Route::view('register-success', 'auth.register_success');
 
 // domain.test => landing page & homepage users customer
 // domain.test => landing page & homepage users tutor
