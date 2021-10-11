@@ -71,5 +71,7 @@
     <script src="{{ asset('assets/vendors') }}/admin/theme/src/assets/js/core.min.js"></script>
     <script src="{{ asset('assets/vendors') }}/admin/theme/src/assets/js/app.min.js"></script>
     <script src="{{ asset('assets/vendors') }}/admin/theme/src/assets/js/script.js"></script>
+
+    @yield('scripts')
   </body>
 </html>
