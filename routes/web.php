@@ -67,6 +67,7 @@ Route::view('step4', 'upgrade.step4');
 Route::view('upgrade-success', 'upgrade.upgrade_success');
 Route::view('register-success', 'auth.register_success');
 Route::view('dashboard/myprofile', 'tutor.tutor_dashboard_profile');
+Route::view('dashboard/edit-profile', 'tutor.tutor_dashboard_editProfile');
 
 
 // domain.test => landing page & homepage users customer

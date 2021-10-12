@@ -20,6 +20,69 @@
         </div>
         <div class="card card-body rounded-corner">
           <div class="profile-info">
+            <h4>Profile Saya</h4>
+
+            <!-- IF CUSTOMER OPEN TUTOR'S PROFILE / DETAIL -->
+            <p>Email</p>
+            <h6>bambangoke@gmail.com</h6>
+            <p>No. Hp</p>
+            <h6>081234567890</h6>
+            <p>Alamat</p>
+            <h6>Jalan-jalan no. 40</h6>
+            <p>Kota</p>
+            <h6>Bandung</h6>
+            <p>Nomor Rekening</p>
+            <h6>76890764</h6>
+            <p>Pemilik Rekening</p>
+            <h6>Bambang Pamungkas</h6>
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+
+          <!-- IF CUSTOMER OPEN TUTOR PROFILE -->
+        <div class="card card-body rounded-corner">
+          <div class="profile-desc">
+            <h4>Tentang Saya</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+
+        <div class="card card-body rounded-corner">
+          <div class="education">
+            <h4>Riwayat Pendidikan Saya</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        <!-- END OF TUTOR PROFILE -->
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        <div class="card card-body rounded-corner">
+          <div class="profile-info">
+            <h4>Kelengkapan</h4>
+            <div class="verified" style="justify-content: space-between;">
+              <h6>KTP</h6> <span class="material-icons">check_circle</span>
+            </div>
+            <div class="verified" style="justify-content: space-between;">
+              <h6>Ijazah</h6> <span class="material-icons">check_circle</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="card card-body rounded-corner">
+          <div class="profile-info">
+            <h4>Tarif</h4>
+            <h6>Rp. 30.000/sesi</h6>
+          </div>
+        </div>
+
+
+        <div class="card card-body rounded-corner">
+          <div class="profile-info">
 
             <!-- IF CUSTOMER OPEN TUTOR'S PROFILE / DETAIL -->
             <h5>Metode Pembelajaran</h5>
@@ -71,39 +134,6 @@
 
         </div>
 
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-12">
-
-          <!-- IF CUSTOMER OPEN TUTOR PROFILE -->
-        <div class="card card-body rounded-corner">
-          <div class="profile-desc">
-            <h4>Profile Saya</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
-
-        <div class="card card-body rounded-corner">
-          <div class="education">
-            <h4>Riwayat Pendidikan Saya</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
-
-        <div class="card card-body rounded-corner">
-          <div class="education">
-            <h4>Pengalaman</h4>
-            <p></p>
-          </div>
-        </div>
-        <!-- END OF TUTOR PROFILE -->
-      </div>
-      <div class="col-lg-3 col-md-3 col-sm-12">
-        <div class="card card-body rounded-corner">
-          <div class="profile-info">
-            <h4>Tarif</h4>
-            <h5>Rp. 30.000/sesi</h5>
-          </div>
-        </div>
       </div>
 
 
