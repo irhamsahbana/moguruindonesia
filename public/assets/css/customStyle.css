@@ -3,6 +3,12 @@ body{
     background-color: #f6f8fb;
     /* background-color: gray; */
 }
+.brand{
+  background-color: white;
+  border-radius: 10px;
+  height: auto;
+  padding: 10px;
+}
 .rounded-corner{
   border-radius: 20px;
 }
@@ -204,3 +210,16 @@ body{
   float: right;
 }
 /* end of upgrade to tutor */
+
+/* Dashboard */
+/* Profile page for tutor */
+.verified{
+  display: flex;
+  justify-content: center;
+}
+.verified .material-icons{
+  color: #57b0f7;
+  font-size: 15pt;
+}
+/* end of profile */
+/* end of dashboard */

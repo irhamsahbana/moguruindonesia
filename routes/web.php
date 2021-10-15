@@ -24,7 +24,7 @@ Route::middleware(['guest'])->group(function () {
     Route::post('login/user', [AuthController::class, 'loginUser'])->name('auth.login.user');
     Route::get('register', [AuthController::class, 'register'])->name('auth.register');
     Route::post('register/user', [AuthController::class, 'registerUser'])->name('auth.register.user');
-    
+
     Route::get('auth/google', [AuthController::class, 'redirectToGoogle'])->name('auth.google');
     Route::get('auth/google/callback', [AuthController::class, 'handleGoogleCallback'])->name('auth.google.callback');
 });
@@ -66,6 +66,9 @@ Route::view('step4', 'upgrade.step4');
 Route::view('step4', 'upgrade.step4');
 Route::view('upgrade-success', 'upgrade.upgrade_success');
 Route::view('register-success', 'auth.register_success');
+Route::view('dashboard/myprofile', 'tutor.tutor_dashboard_profile');
+Route::view('dashboard/edit-profile', 'tutor.tutor_dashboard_editProfile');
+
 
 // domain.test => landing page & homepage users customer
 // domain.test => landing page & homepage users tutor
