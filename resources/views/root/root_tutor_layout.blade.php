@@ -54,22 +54,22 @@
           <li class="menu-item">
             <a class="menu-link" href="products.html">
               <span class="icon ti-briefcase"></span>
-              <span class="title">Products</span>
+              <span class="title">Permintaan Kursus</span>
             </a>
           </li>
 
           <li class="menu-item">
             <a class="menu-link" href="invoices.html">
-              <span class="icon ti-receipt"></span>
-              <span class="title">Invoices</span>
+              <span class="icon ti-write"></span>
+              <span class="title">Kursus Anda</span>
               <span class="badge badge-pill badge-info">2</span>
             </a>
           </li>
 
           <li class="menu-item">
             <a class="menu-link" href="settings.html">
-              <span class="icon ti-settings"></span>
-              <span class="title">Settings</span>
+              <span class="icon ti-check-box"></span>
+              <span class="title">Riwayat Kursus</span>
             </a>
           </li>
 

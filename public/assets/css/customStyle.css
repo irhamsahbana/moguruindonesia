@@ -222,4 +222,23 @@ body{
   font-size: 15pt;
 }
 /* end of profile */
+
+/* course request */
+.action{
+  margin-top: 20px;
+}
+.action .btn{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.preview-info{
+  display: flex;
+  justify-content: flex-start;
+}
+.preview-info p{
+  margin-right: 20px;
+}
+
+
+/* end of course request */
 /* end of dashboard */
