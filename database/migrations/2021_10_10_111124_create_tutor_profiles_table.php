@@ -17,6 +17,7 @@ class CreateTutorProfilesTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('id_card')->nullable();
+            $table->string('last_degree_cert')->nullable();
             $table->text('bio')->nullable();
             $table->string('last_degree_desc')->nullable();
             $table->integer('fee_per_session')->nullable();

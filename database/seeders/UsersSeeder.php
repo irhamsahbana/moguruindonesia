@@ -51,7 +51,7 @@ class UsersSeeder extends Seeder
                 'first_name' => 'Moguru',
                 'last_name' => 'Indonesia',
                 'google_id' => null,
-                'email' => 'neomuguruindonesia@gmail.com',
+                'email' => 'neomoguruindonesia@gmail.com',
                 'email_verified_at' => Carbon::now(),
                 'password' => bcrypt('password'),
                 'avatar' => null,

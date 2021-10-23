@@ -24,7 +24,14 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
+        
+        Gate::define('ordinary_cust', function($user) {
+           return $user->is_verified_tutor == 0 or $user->is_verified_tutor == 2;
+        });
+        
+        Gate::define('tutor_cust', function($user) {
+            return $user->is_verified_tutor == 1;
+         });
 
-        //
     }
 }
