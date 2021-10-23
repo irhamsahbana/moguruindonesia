@@ -55,6 +55,7 @@
             <a class="menu-link" href="products.html">
               <span class="icon ti-briefcase"></span>
               <span class="title">Permintaan Kursus</span>
+              <span class="badge badge-pill badge-info">2</span>
             </a>
           </li>
 
@@ -62,7 +63,7 @@
             <a class="menu-link" href="invoices.html">
               <span class="icon ti-write"></span>
               <span class="title">Kursus Anda</span>
-              <span class="badge badge-pill badge-info">2</span>
+
             </a>
           </li>
 

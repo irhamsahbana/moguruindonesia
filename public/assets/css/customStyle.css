@@ -238,7 +238,13 @@ body{
 .preview-info p{
   margin-right: 20px;
 }
-
-
 /* end of course request */
+
+/* Course detail */
+.confirm-btn{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+/* end of course detail */
 /* end of dashboard */
