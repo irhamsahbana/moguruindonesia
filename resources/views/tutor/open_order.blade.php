@@ -24,7 +24,6 @@
             </div>
           </div>
           <div class="action">
-            <a href="#" class="" data-toggle="modal" data-target="#modal-small2" name="button">TOLAK</a>
             <button type="button" class="btn btn-info rounded-corner2" data-toggle="modal" data-target="#modal-small" name="button">AMBIL</button>
 
             <!-- MODAL 1 -->
@@ -43,27 +42,6 @@
                   <div class="modal-footer">
                     <button type="button" class="btn btn-bold btn-pure btn-secondary" data-dismiss="modal">Batal</button>
                     <button type="button" class="btn btn-bold btn-pure btn-primary">Ambil</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- MODAL 2 -->
-            <div class="modal fade" id="modal-small2" tabindex="-1" style="display: none;" aria-hidden="true">
-              <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                    <button type="button" class="close" data-dismiss="modal">
-                      <span aria-hidden="true">×</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <p>Anda yakin menolak kursus ini?</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-bold btn-pure btn-secondary" data-dismiss="modal">Tidak</button>
-                    <button type="button" class="btn btn-bold btn-pure btn-primary">Ya</button>
                   </div>
                 </div>
               </div>

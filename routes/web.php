@@ -80,6 +80,10 @@ Route::view('dashboard/myprofile', 'tutor.tutor_dashboard_profile');
 Route::view('dashboard/edit-profile', 'tutor.tutor_dashboard_editProfile');
 Route::view('dashboard/course-request', 'tutor.course_request');
 Route::view('dashboard/course-detail', 'tutor.course_detail');
+Route::view('dashboard/ongoing-course', 'tutor.ongoing_course');
+Route::view('dashboard/history-course', 'tutor.history_course');
+Route::view('dashboard/open-order', 'tutor.open_order');
+Route::view('dashboard/absen-order', 'tutor.absen_for_tutor');
 
 
 // domain.test => landing page & homepage users customer

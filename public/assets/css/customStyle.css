@@ -12,6 +12,9 @@ body{
 .rounded-corner{
   border-radius: 20px;
 }
+.rounded-corner2{
+  border-radius: 8px;
+}
 .bg-white{
   background-color: white;
 }

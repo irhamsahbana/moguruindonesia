@@ -37,17 +37,25 @@
       <nav class="sidebar-navigation ps-container ps-theme-default" data-ps-id="89f5ea7e-55d0-0bcc-4fd3-f2cf2438edaa">
         <ul class="menu menu-sm menu-bordery">
 
-          <li class="menu-item active">
+          <!-- <li class="menu-item active">
             <a class="menu-link" href="index.html">
               <span class="icon ti-home"></span>
               <span class="title">Dashboard</span>
             </a>
-          </li>
+          </li> -->
 
-          <li class="menu-item">
+          <li class="menu-item active">
             <a class="menu-link" href="clients.html">
               <span class="icon ti-user"></span>
               <span class="title">Profile</span>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a class="menu-link" href="products.html">
+              <span class="icon ti-receipt"></span>
+              <span class="title">Orderan Terbuka</span>
+              <span class="badge badge-pill badge-info">2</span>
             </a>
           </li>
 

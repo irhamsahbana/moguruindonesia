@@ -49,7 +49,7 @@
         </div>
         <div class="confirm-btn">
           <a href="#" class="btn btn-flat" data-toggle="modal" data-target="#modal-small2" name="button">TOLAK</a>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-small" name="button">AMBIL</button>
+          <button type="button" class="btn btn-primary rounded-corner2" data-toggle="modal" data-target="#modal-small" name="button">AMBIL</button>
 
           <!-- MODAL 1 -->
           <div class="modal fade" id="modal-small" tabindex="-1" style="display: none;" aria-hidden="true">
@@ -66,7 +66,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-bold btn-pure btn-secondary" data-dismiss="modal">Batal</button>
-                  <button type="button" class="btn btn-bold btn-pure btn-primary">Ambil</button>
+                  <button type="button" class="btn btn-bold btn-pure btn-info">Ambil</button>
                 </div>
               </div>
             </div>
