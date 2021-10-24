@@ -48,23 +48,23 @@ Route::middleware(['auth'])->group(function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('welcome', 'customer.first_page')->name('welcome');
+
+    //Ordinary customer register as Tutor
+    Route::middleware(['tutor.registration'])->group(function () {
+        Route::get('tutor-registration-step-1', [TutorRegistration::class, 'selectTutorSubjects'])->name('tutor.reg.1');
+        Route::post('step-1-next', [TutorRegistration::class, 'saveSubjectsAndNext'])->name('tutor.reg.1.next');
+        Route::get('tutor-registration-step-2', [TutorRegistration::class, 'selectTutorDegrees'])->name('tutor.reg.2');
+        Route::post('step-2-next', [TutorRegistration::class, 'saveDegreesAndNext'])->name('tutor.reg.2.next');
+        Route::get('tutor-registration-step-3', [TutorRegistration::class, 'fillTutorBackground'])->name('tutor.reg.3');
+        Route::post('step-3-next', [TutorRegistration::class, 'saveBackgroundAndNext'])->name('tutor.reg.3.next');
+        Route::get('tutor-registration-step-4', [TutorRegistration::class, 'uploadCertAndID'])->name('tutor.reg.4');
+        Route::post('step-4-next', [TutorRegistration::class, 'saveDoc'])->name('tutor.reg.4.next');
+    });
+
+    Route::view('upgrade-success', 'upgrade.upgrade_success')->name('tutor.reg.pending');
 });
 
 Route::get('confirm-email/{token}', [AuthController::class, 'confirmEmail'])->name('verification.confirm');
-
-
-//Ordinary customer register as Tutor
-Route::middleware(['tutor.registration'])->group(function () {
-    Route::get('tutor-registration-step-1', [TutorRegistration::class, 'selectTutorSubjects'])->name('tutor.reg.1');
-    Route::post('step-1-next', [TutorRegistration::class, 'saveSubjectsAndNext'])->name('tutor.reg.1.next');
-    Route::get('tutor-registration-step-2', [TutorRegistration::class, 'selectTutorDegrees'])->name('tutor.reg.2');
-    Route::post('step-2-next', [TutorRegistration::class, 'saveDegreesAndNext'])->name('tutor.reg.2.next');
-    Route::get('tutor-registration-step-3', [TutorRegistration::class, 'fillTutorBackground'])->name('tutor.reg.3');
-    Route::post('step-3-next', [TutorRegistration::class, 'saveBackgroundAndNext'])->name('tutor.reg.3.next');
-    Route::get('tutor-registration-step-4', [TutorRegistration::class, 'uploadCertAndID'])->name('tutor.reg.4');
-    Route::post('step-4-next', [TutorRegistration::class, 'saveDoc'])->name('tutor.reg.4.next');
-});
-    Route::view('upgrade-success', 'upgrade.upgrade_success')->name('tutor.reg.pending');
 
 Route::view('profile', 'customer.profile_page');
 Route::view('tutor-catalog', 'customer.tutor_catalog');
