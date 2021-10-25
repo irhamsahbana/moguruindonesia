@@ -28,7 +28,8 @@ class UsersSeeder extends Seeder
                 'password' => 'not set',
                 'avatar' => 'https://lh3.googleusercontent.com/a-/AOh14GhEW5zARchgmQUXE9h6sGoCurH-NGDXltv1cREkPg=s96-c',
                 'phone' => null,
-                'slug' => Str::lower('Irham'.'-'.'Sahbana'.'-'.Str::random(9)),
+                'slug' => Str::lower('Irham' . '-' . 'Sahbana' . '-' . Str::random(9)),
+                'is_verified_tutor' => 0,
                 'created_at' => Carbon::now()
             ],
             //register with email (still user/learner, unverified)
@@ -42,7 +43,8 @@ class UsersSeeder extends Seeder
                 'password' => bcrypt('password'),
                 'avatar' => null,
                 'phone' => '082188449288',
-                'slug' => Str::lower('Irham'.'-'.'Sahbana'.'-'.Str::random(9)),
+                'slug' => Str::lower('Irham' . '-' . 'Sahbana' . '-' . Str::random(9)),
+                'is_verified_tutor' => 0,
                 'created_at' => Carbon::now()
             ],
             //register with email (still user/learner, verified)
@@ -56,7 +58,53 @@ class UsersSeeder extends Seeder
                 'password' => bcrypt('password'),
                 'avatar' => null,
                 'phone' => null,
-                'slug' => Str::lower('Moguru'.'-'.'Indonesia'.'-'.Str::random(9)),
+                'slug' => Str::lower('Moguru' . '-' . 'Indonesia' . '-' . Str::random(9)),
+                'is_verified_tutor' => 0,
+                'created_at' => Carbon::now()
+            ],
+            //register with email (verified tutor) id 4
+            [
+                'role' => 'customer',
+                'first_name' => 'Tutor',
+                'last_name' => 'Satu',
+                'google_id' => null,
+                'email' => 'tutorsatu@gmail.com',
+                'email_verified_at' => Carbon::now(),
+                'password' => bcrypt('password'),
+                'avatar' => null,
+                'phone' => null,
+                'slug' => Str::lower('Tutor' . '-' . 'Satu' . '-' . Str::random(9)),
+                'is_verified_tutor' => 1,
+                'created_at' => Carbon::now() 
+            ],
+            //register with email (verified tutor) id 5
+            [
+                'role' => 'customer',
+                'first_name' => 'Tutor',
+                'last_name' => 'Dua',
+                'google_id' => null,
+                'email' => 'tutordua@gmail.com',
+                'email_verified_at' => Carbon::now(),
+                'password' => bcrypt('password'),
+                'avatar' => null,
+                'phone' => null,
+                'slug' => Str::lower('Tutor' . '-' . 'Dua' . '-' . Str::random(9)),
+                'is_verified_tutor' => 1,
+                'created_at' => Carbon::now() 
+            ],
+            //register with email (waiting for verification from admin)
+            [
+                'role' => 'customer',
+                'first_name' => 'Tutor',
+                'last_name' => 'Tiga',
+                'google_id' => null,
+                'email' => 'tutortiga@gmail.com',
+                'email_verified_at' => Carbon::now(),
+                'password' => bcrypt('password'),
+                'avatar' => null,
+                'phone' => null,
+                'slug' => Str::lower('Tutor' . '-' . 'Tiga' . '-' . Str::random(9)),
+                'is_verified_tutor' => 2,
                 'created_at' => Carbon::now()
             ],
         ];

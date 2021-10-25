@@ -19,7 +19,11 @@ class DatabaseSeeder extends Seeder
         $this->call([
             DegreesSeeder::class,
             SubjectsSeeder::class,
-            UsersSeeder::class
+            UsersSeeder::class,
+            
+            TutorSubjectsSeeder::class,
+            TutorDegreesSeeder::class,
+            TutorProfilesSeeder::class,
         ]);
     }
 }

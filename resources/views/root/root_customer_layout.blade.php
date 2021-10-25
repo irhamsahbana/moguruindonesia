@@ -93,7 +93,7 @@ src="http://thetheme.io/theadmin/samples/invoicer/../../assets/vendor/bootstrap-
           <p class="nav-item"> <a class="nav-link" href="#"> Tutor Dashboard</a> </p>
         @endcan
 
-        <p class="nav-item"> <a class="nav-link" href="#"> Katalog Tutor</a> </p>
+        <p class="nav-item"> <a class="nav-link" href="{{ route('tutor.catalog') }}"> Katalog Tutor</a> </p>
 
         <!-- <form class="lookup lookup-right search-bar" action="index.html" method="post">
             <input class="search-input" type="text" name="" value="" placeholder="lokasi anda" style="width:40%;">

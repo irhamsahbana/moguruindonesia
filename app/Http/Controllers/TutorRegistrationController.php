@@ -7,9 +7,8 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Storage;
 
-class TutorRegistration extends Controller
+class TutorRegistrationController extends Controller
 {
     public function selectTutorSubjects()
     {
