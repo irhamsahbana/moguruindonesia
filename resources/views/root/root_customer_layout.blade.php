@@ -73,7 +73,7 @@ src="http://thetheme.io/theadmin/samples/invoicer/../../assets/vendor/bootstrap-
             <span class="topbar-btn" data-toggle="dropdown"><img class="avatar"
                 src="{{ asset('assets/img') }}/account.png" alt="..."></span>
             <div class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="#"><i class="ti-user"></i> Profile</a>
+              <a class="dropdown-item" href="{{ route('tutor.profile', Auth::user()->slug) }}"><i class="ti-user"></i> Profile</a>
               <!-- <a class="dropdown-item" href="#"><i class="ti-settings"></i> Settings</a>
                 <a class="dropdown-item" href="#"><i class="ti-help"></i> Help</a> -->
               <div class="dropdown-divider"></div>
