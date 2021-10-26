@@ -4,6 +4,7 @@
 <div class="container">
   <div class="profile-section" style="padding-top:0;">
     <div class="card card-body rounded-corner">
+      <h4>Detail Kursus</h4>
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6">
           <table>

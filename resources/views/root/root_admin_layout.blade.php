@@ -37,24 +37,24 @@
       <nav class="sidebar-navigation ps-container ps-theme-default" data-ps-id="89f5ea7e-55d0-0bcc-4fd3-f2cf2438edaa">
         <ul class="menu menu-sm menu-bordery">
 
-          <!-- <li class="menu-item active">
+          <li class="menu-item active">
             <a class="menu-link" href="index.html">
               <span class="icon ti-home"></span>
               <span class="title">Dashboard</span>
             </a>
-          </li> -->
+          </li>
 
-          <li class="menu-item active">
+          <li class="menu-item">
             <a class="menu-link" href="clients.html">
               <span class="icon ti-user"></span>
-              <span class="title">Profile</span>
+              <span class="title">List Of User</span>
             </a>
           </li>
 
           <li class="menu-item">
             <a class="menu-link" href="products.html">
               <span class="icon ti-receipt"></span>
-              <span class="title">Orderan Terbuka</span>
+              <span class="title">List Of Tutor</span>
               <span class="badge badge-pill badge-info">2</span>
             </a>
           </li>
@@ -62,7 +62,7 @@
           <li class="menu-item">
             <a class="menu-link" href="products.html">
               <span class="icon ti-briefcase"></span>
-              <span class="title">Permintaan Kursus</span>
+              <span class="title">Transaction</span>
               <span class="badge badge-pill badge-info">2</span>
             </a>
           </li>
@@ -70,7 +70,7 @@
           <li class="menu-item">
             <a class="menu-link" href="invoices.html">
               <span class="icon ti-write"></span>
-              <span class="title">Kursus Anda</span>
+              <span class="title"></span>
 
             </a>
           </li>
@@ -90,15 +90,13 @@
     <header class="topbar">
       <div class="container">
         <div class="topbar-left">
-          <!-- <span class="topbar-btn sidebar-toggler"><i>☰</i></span> -->
-          <!-- <a class="logo d-lg-none" href="#"> -->
+          <span class="topbar-btn sidebar-toggler"><i>☰</i></span>
+          <a class="logo d-lg-none" href="#">
 
-          <!-- </a> -->
+          </a>
         </div>
 
         <div class="topbar-right" style="width:100%; padding: 0 0 0 10px;">
-
-
           <ul class="topbar-btns">
             <li class="dropdown">
               <span class="topbar-btn" data-toggle="dropdown"><img class="avatar" src="{{ asset('assets/img') }}/account.png" alt="..."></span>
@@ -111,59 +109,6 @@
               </div>
             </li>
           </ul>
-
-          <li class="dropdown d-none d-lg-block">
-            <span class="topbar-btn has-new" data-toggle="dropdown" aria-expanded="false"><i class="ti-bell"></i></span>
-            <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: top, left; top: 65px; left: 0px;">
-
-              <div class="media-list media-list-hover media-list-divided media-list-xs">
-                <a class="media media-new" href="#">
-                  <span class="avatar bg-success"><i class="ti-user"></i></span>
-                  <div class="media-body">
-                    <p>New user registered</p>
-                    <time datetime="2018-07-14 20:00">Just now</time>
-                  </div>
-                </a>
-
-                <a class="media" href="#">
-                  <span class="avatar bg-info"><i class="ti-shopping-cart"></i></span>
-                  <div class="media-body">
-                    <p>New order received</p>
-                    <time datetime="2018-07-14 20:00">2 min ago</time>
-                  </div>
-                </a>
-
-                <a class="media" href="#">
-                  <span class="avatar bg-warning"><i class="ti-face-sad"></i></span>
-                  <div class="media-body">
-                    <p>Refund request from <b>Ashlyn Culotta</b></p>
-                    <time datetime="2018-07-14 20:00">24 min ago</time>
-                  </div>
-                </a>
-
-                <a class="media" href="#">
-                  <span class="avatar bg-primary"><i class="ti-money"></i></span>
-                  <div class="media-body">
-                    <p>New payment has made through PayPal</p>
-                    <time datetime="2018-07-14 20:00">53 min ago</time>
-                  </div>
-                </a>
-              </div>
-
-              <div class="dropdown-footer">
-                <div class="left">
-                  <a href="#">Read all notifications</a>
-                </div>
-
-                <div class="right">
-                  <a href="#" data-provide="tooltip" title="" data-original-title="Mark all as read"><i class="fa fa-circle-o"></i></a>
-                  <a href="#" data-provide="tooltip" title="" data-original-title="Update"><i class="fa fa-repeat"></i></a>
-                  <a href="#" data-provide="tooltip" title="" data-original-title="Settings"><i class="fa fa-gear"></i></a>
-                </div>
-              </div>
-
-            </div>
-          </li>
 
 
 
