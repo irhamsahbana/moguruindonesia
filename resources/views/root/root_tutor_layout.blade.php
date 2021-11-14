@@ -6,7 +6,7 @@
     <meta name="description" content="TheAdmin - Responsive admin and web application ui kit">
     <meta name="keywords" content="admin, dashboard, web app, sass, ui kit, ui framework, bootstrap">
 
-    <title>Moguru Indonesia</title>
+    <title>@yield('title', 'Moguru Indonesia')</title>
 
     <!-- Styles -->
     <link href="{{ asset('assets/vendors') }}/admin/theme/src/assets/css/core.min.css" rel="stylesheet">
@@ -60,7 +60,7 @@
           </li>
 
           <li class="menu-item">
-            <a class="menu-link" href="products.html">
+            <a class="menu-link" href="{{ route('dashboard.tutor.course.request') }}">
               <span class="icon ti-briefcase"></span>
               <span class="title">Permintaan Kursus</span>
               <span class="badge badge-pill badge-info">2</span>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DirectOrderController;
 use App\Http\Controllers\TutorCatalogController;
 use App\Http\Controllers\TutorRegistrationController;
 
@@ -60,19 +61,26 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('tutor-registration-step-4', [TutorRegistrationController::class, 'uploadCertAndID'])->name('tutor.reg.4');
         Route::post('step-4-next', [TutorRegistrationController::class, 'saveDoc'])->name('tutor.reg.4.next');
     });
-
     Route::view('upgrade-success', 'upgrade.upgrade_success')->name('tutor.reg.pending');
+
+    //Tutor Catalog & customer profile
+    Route::get('tutor-catalog', [TutorCatalogController::class, 'index'])->name('tutor.catalog');
+    Route::get('profile/{slug}', [TutorCatalogController::class, 'tutorProfile'])->name('tutor.profile');
+    Route::put('profile/{slug}/edit', [TutorCatalogController::class, 'tutorProfileEdit'])->name('tutor.profile.edit');
+
+    //Order Direct
+    Route::get('reservation/direct/{slug}/request', [DirectOrderController::class, 'requestOrder'])->name('direct.order.request');
+    Route::post('reservation/direct/{slug}/request', [DirectOrderController::class, 'requestOrderPost'])->name('direct.order.request.post');
+    Route::get('reservation/direct/{slug}/summary', [DirectOrderController::class, 'summaryOrder'])->name('direct.order.summary');
+    Route::post('reservation/direct/{slug}/confirm', [DirectOrderController::class, 'confirmOrder'])->name('direct.order.confirm');
+    Route::get('reservation/direct/{slug}/{uniqueCode}', [DirectOrderController::class, 'successOrder'])->name('direct.order.success');
+    // Route::get('reservation/direct/{slug}', [DirectOrderController::class, '']);
+    Route::view('reservation', 'customer.reservation_page');
 });
 
 Route::get('confirm-email/{token}', [AuthController::class, 'confirmEmail'])->name('verification.confirm');
 
-//Tutor Catalog & customer profile
-Route::get('tutor-catalog', [TutorCatalogController::class, 'index'])->name('tutor.catalog');
-Route::get('profile/{slug}', [TutorCatalogController::class, 'tutorProfile'])->name('tutor.profile');
-Route::put('profile/{slug}/edit', [TutorCatalogController::class, 'tutorProfileEdit'])->name('tutor.profile.edit');
-
 Route::view('profile', 'customer.profile_page');
-Route::view('reservation', 'customer.reservation_page');
 Route::view('payment-method', 'customer.payment_method');
 Route::view('checkout', 'customer.checkout');
 Route::view('payment', 'customer.payment');
@@ -80,13 +88,13 @@ Route::view('payment-success', 'customer.payment-success');
 Route::view('absen', 'customer.absen_for_customer');
 
 Route::view('register-success', 'auth.register_success');
-Route::view('dashboard/myprofile', 'tutor.tutor_dashboard_profile');
+Route::view('dashboard/myprofile', 'tutor.tutor_dashboard_profile')->name('dashboard.tutor.profile');
+Route::view('dashboard/course-request', 'tutor.course_request')->name('dashboard.tutor.course.request');
+Route::view('dashboard/open-order', 'tutor.open_order');
 Route::view('dashboard/edit-profile', 'tutor.tutor_dashboard_editProfile');
-Route::view('dashboard/course-request', 'tutor.course_request');
 Route::view('dashboard/course-detail', 'tutor.course_detail');
 Route::view('dashboard/ongoing-course', 'tutor.ongoing_course');
 Route::view('dashboard/history-course', 'tutor.history_course');
-Route::view('dashboard/open-order', 'tutor.open_order');
 Route::view('dashboard/absen-order', 'tutor.absen_for_tutor');
 
 
