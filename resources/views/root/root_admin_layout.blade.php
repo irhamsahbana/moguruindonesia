@@ -47,14 +47,20 @@
           <li class="menu-item">
             <a class="menu-link" href="clients.html">
               <span class="icon ti-user"></span>
-              <span class="title">List Of User</span>
+              <span class="title">Pengguna</span>
             </a>
           </li>
 
           <li class="menu-item">
             <a class="menu-link" href="products.html">
               <span class="icon ti-receipt"></span>
-              <span class="title">List Of Tutor</span>
+              <span class="title">Tutor</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="products.html">
+              <span class="icon ti-receipt"></span>
+              <span class="title">Tutor Baru</span>
               <span class="badge badge-pill badge-info">2</span>
             </a>
           </li>
@@ -62,7 +68,7 @@
           <li class="menu-item">
             <a class="menu-link" href="products.html">
               <span class="icon ti-briefcase"></span>
-              <span class="title">Transaction</span>
+              <span class="title">Transaksi</span>
               <span class="badge badge-pill badge-info">2</span>
             </a>
           </li>
@@ -70,17 +76,17 @@
           <li class="menu-item">
             <a class="menu-link" href="invoices.html">
               <span class="icon ti-write"></span>
-              <span class="title"></span>
+              <span class="title">Kursus Selesai</span>
 
             </a>
           </li>
 
-          <li class="menu-item">
+          <!-- <li class="menu-item">
             <a class="menu-link" href="settings.html">
               <span class="icon ti-check-box"></span>
               <span class="title">Riwayat Kursus</span>
             </a>
-          </li>
+          </li> -->
 
         </ul>
       <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 2px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></nav>

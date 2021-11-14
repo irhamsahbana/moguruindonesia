@@ -89,6 +89,7 @@ Route::view('dashboard/history-course', 'tutor.history_course');
 Route::view('dashboard/open-order', 'tutor.open_order');
 Route::view('dashboard/absen-order', 'tutor.absen_for_tutor');
 
+Route::view('admin/dashboard', 'admin.admin_dashboard');
 Route::view('admin/user-list', 'admin.list_of_user');
 Route::view('admin/tutor-list', 'admin.list_of_tutor');
 Route::view('admin/detail-user', 'admin.detail_user');
