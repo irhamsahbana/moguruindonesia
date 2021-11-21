@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DirectOrderController;
 use App\Http\Controllers\TutorCatalogController;
 use App\Http\Controllers\TutorRegistrationController;
+use App\Http\Controllers\TutorDashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,14 +89,19 @@ Route::view('payment-success', 'customer.payment-success');
 Route::view('absen', 'customer.absen_for_customer');
 
 Route::view('register-success', 'auth.register_success');
-Route::view('dashboard/myprofile', 'tutor.tutor_dashboard_profile')->name('dashboard.tutor.profile');
-Route::view('dashboard/course-request', 'tutor.course_request')->name('dashboard.tutor.course.request');
-Route::view('dashboard/open-order', 'tutor.open_order');
-Route::view('dashboard/edit-profile', 'tutor.tutor_dashboard_editProfile');
-Route::view('dashboard/course-detail', 'tutor.course_detail');
-Route::view('dashboard/ongoing-course', 'tutor.ongoing_course');
-Route::view('dashboard/history-course', 'tutor.history_course');
-Route::view('dashboard/absen-order', 'tutor.absen_for_tutor');
+
+Route::group(['prefix' => 'tutor-dashboard'], function () {
+    Route::get('/profile', [TutorDashboardController::class, 'profile'])->name('dashboard.tutor.profile');
+    Route::get('/course-request', [TutorDashboardController::class, 'waitingOrders'])->name('dashboard.tutor.course.request');
+    Route::put('/course-request/accept/{slug}', [TutorDashboardController::class, 'acceptOrder'])->name('dashboard.tutor.course.request.accept');
+    Route::put('/course-request/reject/{slug}', [TutorDashboardController::class, 'rejectOrder'])->name('dashboard.tutor.course.request.reject');
+    Route::view('/open-order', 'tutor.open_order');
+    Route::view('/edit-profile', 'tutor.tutor_dashboard_editProfile');
+    Route::view('/course-detail', 'tutor.course_detail');
+    Route::view('/ongoing-course', 'tutor.ongoing_course');
+    Route::view('/history-course', 'tutor.history_course');
+    Route::view('/absen-order', 'tutor.absen_for_tutor');
+});
 
 Route::view('admin/dashboard', 'admin.admin_dashboard');
 Route::view('admin/user-list', 'admin.list_of_user');
