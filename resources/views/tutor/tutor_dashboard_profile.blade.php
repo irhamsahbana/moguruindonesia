@@ -13,7 +13,7 @@
                 <h5>Terverifikasi</h5>
                 <span class="material-icons">check_circle</span>
               </div>
-              <a class="btn btn-round btn-primary" href="#"> Edit Profile </a>
+              <a class="btn btn-round btn-primary" href="{{ route('dashboard.tutor.profile-edit') }}"> Edit Profile </a>
               <!-- <a class="btn btn-round btn-primary" data-toggle="modal" data-target="#exampleModal" href="#"> Edit Profile </a> -->
             </div>
 

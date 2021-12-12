@@ -73,7 +73,7 @@
       <ul class="menu menu-sm menu-bordery">
 
         <li class="menu-item active">
-          <a class="menu-link" href="clients.html">
+          <a class="menu-link" href="{{ route('dashboard.tutor.profile') }}">
             <span class="icon ti-user"></span>
             <span class="title">Profile</span>
           </a>
@@ -98,15 +98,17 @@
         </li>
 
         <li class="menu-item">
-          <a class="menu-link" href="invoices.html">
+          <a class="menu-link" href="{{ route('dashboard.tutor.course.ongoing') }}">
             <span class="icon ti-write"></span>
             <span class="title">Kursus Anda</span>
-
+            @if ($acceptedOrders > 0)
+              <span class="badge badge-pill badge-info">{{ $acceptedOrders }}</span>
+            @endif
           </a>
         </li>
 
         <li class="menu-item">
-          <a class="menu-link" href="settings.html">
+          <a class="menu-link" href="{{ route('dashboard.tutor.course.complete') }}">
             <span class="icon ti-check-box"></span>
             <span class="title">Riwayat Kursus</span>
           </a>

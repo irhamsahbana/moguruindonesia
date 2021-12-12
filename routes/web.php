@@ -92,14 +92,18 @@ Route::view('register-success', 'auth.register_success');
 
 Route::group(['prefix' => 'tutor-dashboard'], function () {
     Route::get('/profile', [TutorDashboardController::class, 'profile'])->name('dashboard.tutor.profile');
+    Route::get('/profile/edit', [TutorDashboardController::class, 'profileEdit'])->name('dashboard.tutor.profile-edit');
+    Route::put('/profile/update', [TutorDashboardController::class, 'profileUpdate'])->name('dashboard.tutor.profile-update');
+    // Route::view('/profile/edit', 'tutor.tutor_dashboard_editProfile');
     Route::get('/course-request', [TutorDashboardController::class, 'waitingOrders'])->name('dashboard.tutor.course.request');
     Route::put('/course-request/accept/{slug}', [TutorDashboardController::class, 'acceptOrder'])->name('dashboard.tutor.course.request.accept');
     Route::put('/course-request/reject/{slug}', [TutorDashboardController::class, 'rejectOrder'])->name('dashboard.tutor.course.request.reject');
+    Route::get('/ongoing-courses', [TutorDashboardController::class, 'acceptedOrders'])->name('dashboard.tutor.course.ongoing'); // kursus anda
+    Route::get('/completed-courses', [TutorDashboardController::class, 'completedOrders'])->name('dashboard.tutor.course.complete');
+    Route::view('/course-done', 'tutor.history_course'); // history course
+    Route::get('/course-detail/{slug}', [TutorDashboardController::class, 'orderDetail'])->name('dashboard.tutor.course.detail');
+    // Route::view('/course-detail', 'tutor.course_detail');
     Route::view('/open-order', 'tutor.open_order');
-    Route::view('/edit-profile', 'tutor.tutor_dashboard_editProfile');
-    Route::view('/course-detail', 'tutor.course_detail');
-    Route::view('/ongoing-course', 'tutor.ongoing_course');
-    Route::view('/history-course', 'tutor.history_course');
     Route::view('/absen-order', 'tutor.absen_for_tutor');
 });
 

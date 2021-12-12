@@ -17,6 +17,8 @@ class TutorDashboardComposer
     public function compose(View $view)
     {   
         $incomingOrders =  DB::table('orders')->where('status', 'waiting')->where('tutor_id', Auth::id())->count();
+        $acceptedOrders =  DB::table('orders')->where('status', 'accepted')->where('tutor_id', Auth::id())->count();
         $view->with('incomingOrders', $incomingOrders);
+        $view->with('acceptedOrders', $acceptedOrders);
     }
 }

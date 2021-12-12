@@ -19,7 +19,7 @@
                   <p>Kursus: <strong>{{ $wo->subject_name }}</strong> </p>
                   <p>Jumlah Pertemuan: <strong>{{ $wo->num_meets }}</strong></p>
                   <p>Metode Pembelajaran: <strong>{{ $wo->learning_method }}</strong></p>
-                  <p><a href="#" style="color:#48b0f7;">Selengkapnya...</a></p>
+                  <p><a href="{{ route('dashboard.tutor.course.detail', $wo->unique_code) }}" target="_blank" style="color:#48b0f7;">Selengkapnya...</a></p>
 
                 </div>
               </div>
@@ -74,9 +74,11 @@
                       <div class="modal-footer">
                         <button type="button" class="btn btn-bold btn-pure btn-secondary"
                           data-dismiss="modal">Tidak</button>
-
-                        <button type="button" class="btn btn-bold btn-pure btn-primary">Ya</button>
-
+                        <form action="{{ route('dashboard.tutor.course.request.reject', $wo->unique_code) }}" method="POST">
+                          @method('PUT')
+                          @csrf
+                          <button type="submit" class="btn btn-bold btn-pure btn-primary">Ya</button>
+                        </from>
                       </div>
                     </div>
                   </div>
@@ -85,6 +87,14 @@
               </div>
             </div>
           @endforeach
+
+          @if(count($waitingOrders) < 1)
+            <div class="media">
+              <div class="media-body">
+                <p>Tidak ada permintaan kursus yang masuk.</p>
+              </div>
+            </div>
+          @endif
         </div>
 
 
