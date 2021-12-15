@@ -20,6 +20,9 @@ class CreateTutorProfilesTable extends Migration
             $table->string('last_degree_cert')->nullable();
             $table->text('bio')->nullable();
             $table->string('last_degree_desc')->nullable();
+            $table->string('bank_name')->nullable();
+            $table->string('bank_owner')->nullable();
+            $table->string('bank_account_number')->nullable();
             $table->integer('fee_per_session')->nullable();
             $table->timestamps();
         });

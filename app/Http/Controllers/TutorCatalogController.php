@@ -26,6 +26,10 @@ class TutorCatalogController extends Controller
             ->select('users.id AS user_id','users.first_name', 'users.last_name', 'users.address', 'users.phone', 'users.slug', 'tutor_profiles.fee_per_session', 'tutor_profiles.bio', 'tutor_profiles.last_degree_desc',)
             ->where(['users.slug' => $slug])->first();
 
+        if(!$tutor){
+            abort(404);
+        }
+
         $tutorSubjects = DB::table('tutor_subjects')
             ->leftJoin('subjects', 'tutor_subjects.subject_id', '=', 'subjects.id')
             ->select('subjects.subject_name')

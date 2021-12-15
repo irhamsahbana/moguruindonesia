@@ -16,7 +16,7 @@
                   <a class="btn btn-round btn-primary" data-toggle="modal" data-target="#exampleModal" href="#"> Sunting
                     Profil</a>
                 @else
-                  <a class="btn btn-round btn-primary" href="#"> Reservasi Kursus </a>
+                  <a class="btn btn-round btn-primary" href="{{ route('direct.order.request', $tutor->slug) }}"> Reservasi Kursus </a>
                 @endif
               </div>
             </div>

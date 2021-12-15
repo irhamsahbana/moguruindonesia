@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
 
+use Faker\Factory as Faker;
+
 class UsersSeeder extends Seeder
 {
     /**
@@ -16,6 +18,7 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
+        $faker = Faker::create('id_ID');
         $users = [
             //register with google account (still user/learner, verified)
             [
@@ -72,7 +75,7 @@ class UsersSeeder extends Seeder
                 'email_verified_at' => Carbon::now(),
                 'password' => bcrypt('password'),
                 'avatar' => null,
-                'phone' => null,
+                'phone' => $faker->phoneNumber(),
                 'slug' => Str::lower('Tutor' . '-' . 'Satu' . '-' . Str::random(9)),
                 'is_verified_tutor' => 1,
                 'created_at' => Carbon::now() 
@@ -87,7 +90,7 @@ class UsersSeeder extends Seeder
                 'email_verified_at' => Carbon::now(),
                 'password' => bcrypt('password'),
                 'avatar' => null,
-                'phone' => null,
+                'phone' => $faker->phoneNumber(),
                 'slug' => Str::lower('Tutor' . '-' . 'Dua' . '-' . Str::random(9)),
                 'is_verified_tutor' => 1,
                 'created_at' => Carbon::now() 
@@ -102,7 +105,7 @@ class UsersSeeder extends Seeder
                 'email_verified_at' => Carbon::now(),
                 'password' => bcrypt('password'),
                 'avatar' => null,
-                'phone' => null,
+                'phone' => $faker->phoneNumber(),
                 'slug' => Str::lower('Tutor' . '-' . 'Tiga' . '-' . Str::random(9)),
                 'is_verified_tutor' => 2,
                 'created_at' => Carbon::now()

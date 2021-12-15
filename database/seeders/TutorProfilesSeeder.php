@@ -27,6 +27,9 @@ class TutorProfilesSeeder extends Seeder
                 'bio' => $faker->text,
                 'last_degree_desc' => $faker->text,
                 'fee_per_session' => 35_000,
+                'bank_name' => "Mandiri",
+                'bank_owner' => "Irham",
+                'bank_account_number' => $faker->bankAccountNumber(),
                 'created_at' => Carbon::now()
             ],
             [
@@ -36,6 +39,9 @@ class TutorProfilesSeeder extends Seeder
                 'bio' => $faker->text,
                 'last_degree_desc' => $faker->text,
                 'fee_per_session' => 60_000,
+                'bank_name' => 'BNI',
+                'bank_owner' => 'Sahbana',
+                'bank_account_number' => $faker->bankAccountNumber(),
                 'created_at' => Carbon::now()
             ]
 
