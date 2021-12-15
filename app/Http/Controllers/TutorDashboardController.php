@@ -38,7 +38,7 @@ class TutorDashboardController extends Controller
     public function profileUpdate(Request $request)
     {
         $this->validate($request,[
-            'avatar' => 'nullable|image|max:2048',
+            'avatar' => 'nullable|image',
             'first_name' => 'required',
             'last_name' => 'required',
             'phone' => 'required',
@@ -50,6 +50,7 @@ class TutorDashboardController extends Controller
         ]);
 
         $file = $request->file('avatar');
+        $old_file = $request->input('old_avatar');
 
         $user = User::findOrFail(Auth::id());
         $user->first_name = $request->first_name;
@@ -63,16 +64,22 @@ class TutorDashboardController extends Controller
         $tutorProfile->bank_owner = $request->bank_owner;
         $tutorProfile->bank_account_number = $request->bank_account_number;
 
-        if($file != null){
-            $image_path = public_path('avatar/'.$user->avatar);
+        if ($file != null && ($request->base64image || $request->base64image != '0')) {
+            $image_path = public_path('avatar/'.$old_file );
 
             if(File::exists($image_path))
                 File::delete($image_path);
 
+            $folderPath = public_path('avatar/');
             $filename = time().'_'.$file->getClientOriginalName();
             $filename = str_replace(' ', '_', $filename);
-            $file->move(public_path('avatar'), $filename);
+
             $user->avatar = $filename;
+
+            $image_parts = explode(";base64,", $request->base64image);
+            $image_base64 = base64_decode($image_parts[1]);
+            $fileFolder = $folderPath.$filename;
+            file_put_contents($fileFolder, $image_base64);
         }
 
         $user->save();

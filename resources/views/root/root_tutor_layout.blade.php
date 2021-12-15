@@ -25,7 +25,20 @@
   <!-- Favicons -->
   <link rel="apple-touch-icon" href="{{ asset('assets/vendors') }}/admin/theme/src/assets/img/apple-touch-icon.png">
   <link rel="icon" href="{{ asset('assets/vendors') }}/admin/theme/src/assets/img/favicon.png">
+
+  @stack('styles')
   <style type="text/css">
+    .img-cropper {
+            display: block;
+            max-width: 100%;
+        }
+    .preview {
+        overflow: hidden;
+        width: 160px; 
+        height: 160px;
+        margin: 10px;
+        border: 1px solid red;
+    }
     /* Chart.js */
     @-webkit-keyframes chartjs-render-animation {
       from {
@@ -51,7 +64,6 @@
       -webkit-animation: chartjs-render-animation 0.001s;
       animation: chartjs-render-animation 0.001s;
     }
-
   </style>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -223,7 +235,7 @@
   <script src="{{ asset('assets/vendors') }}/admin/theme/src/assets/js/app.min.js"></script>
   <script src="{{ asset('assets/vendors') }}/admin/theme/src/assets/js/script.js"></script>
 
-  @yield('scripts')
+  @stack('scripts')
 </body>
 
 </html>
