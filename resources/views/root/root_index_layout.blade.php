@@ -68,46 +68,36 @@ src="http://thetheme.io/theadmin/samples/invoicer/../../assets/vendor/bootstrap-
 
       <div class="topbar-right" style="width:100%; padding: 0 0 0 10px;">
 
-        <ul class="topbar-btns">
-          <li class="dropdown">
-            <span class="topbar-btn" data-toggle="dropdown"><img class="avatar"
-                src="{{ asset('assets/img') }}/account.png" alt="..."></span>
-            <div class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="{{ route('tutor.profile', Auth::user()->slug) }}"><i
-                  class="ti-user"></i> Profile</a>
-              <!-- <a class="dropdown-item" href="#"><i class="ti-settings"></i> Settings</a>
-                <a class="dropdown-item" href="#"><i class="ti-help"></i> Help</a> -->
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="{{ route('auth.logout') }}"><i class="ti-power-off"></i> Logout</a>
-            </div>
-          </li>
-        </ul>
-
-        <p class="nav-item"> <a class="nav-link" href="#">
-            {{ Auth::user()->first_name . ' ' . Auth::user()->last_name }}</a> </p>
-
-        @can('ordinary_cust')
-          <p class="nav-item"> <a class="nav-link btn btn-info rounded-corner2" href="{{ route('tutor.reg.1') }}" style="color: white;"> Daftar Sebagai
-              Tutor</a>
-          </p>
-        @endcan
-        @can('tutor_cust')
-          <p class="nav-item"> <a class="nav-link btn btn-info rounded-corner2" href="{{ route('dashboard.tutor.profile') }}" style="color: white;">Dashboard Saya</a> </p>
-        @endcan
-
-        <p class="nav-item"> <a class="nav-link" href="{{ route('tutor.catalog') }}"> Katalog Tutor</a>
+        <p class="nav-item"> <a class="nav-link btn btn-info rounded-corner2" href="{{ route('auth.login') }}" style="color: white;"> Masuk </a>
         </p>
-
-        <!-- <form class="lookup lookup-right search-bar" action="index.html" method="post">
-            <input class="search-input" type="text" name="" value="" placeholder="lokasi anda" style="width:40%;">
-            <input class="search-input" type="text" name="" value="" placeholder="Kursus" style="width:60%;">
-          </form> -->
+        <p class="nav-item"> <a class="nav-link " href=""> Kontak Kami </a>
+        </p>
+        <p class="nav-item"> <a class="nav-link " href=""> Testimoni </a>
+        </p>
+        <p class="nav-item"> <a class="nav-link " href=""> Layanan Kami </a>
+        </p>
+        <p class="nav-item"> <a class="nav-link " href=""> Tentang Kami </a>
+        </p>
 
       </div>
     </div>
   </header>
 
   @yield('content')
+
+  <footer class="site-footer" style="background-color: black; height: 70px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="text-center text-md-left" style="color: white">Copyright © 2021 Moguru Indonesia. All rights reserved.</p>
+        </div>
+
+        <div class="col-md-6">
+        
+        </div>
+      </div>
+    </div>
+  </footer>
   
   {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> --}}
   <script src="{{ asset('assets/vendors') }}/admin/theme/src/assets/js/core.min.js"></script>

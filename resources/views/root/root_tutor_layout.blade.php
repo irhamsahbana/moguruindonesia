@@ -114,6 +114,13 @@
           </a>
         </li>
 
+        <li class="menu-item">
+          <a class="menu-link" href="{{ route('dashboard.tutor.course.complete') }}">
+            <span class="icon ti-desktop"></span>
+            <span class="title">Kembali ke Beranda</span>
+          </a>
+        </li>
+
       </ul>
       <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;">
         <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
@@ -128,6 +135,9 @@
   <header class="topbar">
     <div class="container">
       <div class="topbar-left">
+        <span class="topbar-btn sidebar-toggler"><i>☰</i></span>
+        <a class="logo d-lg-none" href="index.html"><img src="{{ asset('assets/img') }}/brand/brand-logo.png" width="200" height="auto" alt="logo"></a>
+
       </div>
 
       <div class="topbar-right" style="width:100%; padding: 0 0 0 10px;">

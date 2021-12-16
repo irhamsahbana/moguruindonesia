@@ -18,7 +18,10 @@
     @endif
 
     <div class="card card-shadowed px-50 py-30 w-400px mx-auto rounded-corner" style="max-width: 100%">
-      <img src="{{ asset('assets/img') }}/brand/brand-logo.png" alt="" width="250" height="auto" style="margin-left:auto; margin-right:auto;">
+        <a href="{{ route('index') }}">
+         <img src="{{ asset('assets/img') }}/brand/brand-logo.png" alt="" width="250" height="auto" style="margin-left:auto; margin-right:auto;">
+         
+        </a>
       <!-- <h5 class="text-uppercase"style="margin-left:auto; margin-right:auto; margin-top:20px; color:#33cabb;">MASUK</h5> -->
       <br>
 
