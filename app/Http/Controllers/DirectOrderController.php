@@ -70,7 +70,7 @@ class DirectOrderController extends Controller
     }
 
     public function summaryOrder($slug)
-    {   
+    {
         $subjectName = null;
         if(DB::table('subjects')->where(['id' => old('subject_id')])->first()){
             $subjectName = DB::table('subjects')->where(['id' => old('subject_id')])->first()->subject_name;
@@ -124,9 +124,9 @@ class DirectOrderController extends Controller
             'fee' => $fee,
             'created_at' => Carbon::now(),
         ];
-        
+
         DB::table('orders')->insert($request->except('_token') + $additional);
-        
+
         return redirect()->route('direct.order.success', ['slug' => $slug, 'uniqueCode' => $request->unique_code]);
     }
 

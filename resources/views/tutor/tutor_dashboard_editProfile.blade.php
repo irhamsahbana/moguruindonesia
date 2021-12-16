@@ -21,7 +21,7 @@
                     <img class="rounded-corner cropper-preview" src="{{ asset('assets/img') }}/no-photo.png" alt="">
                 @endif
                 <div class="file-group file-group-inline" style="margin-left:auto; margin-right:auto; margin-top:20px; width:100%;">
-                  <button class="btn btn-info btn-round file-browser" style="width:100%;" type="button">Ganti Foto</button>
+                  <button class="btn btn-primary rounded-corner2 file-browser" style="width:100%;" type="button">Ganti Foto</button>
                   <input type="file" name="avatar" class="image" accept=".png, .jpg, .jpeg">
                   <input type="hidden" name="base64image" id="base64image">
                   <input type="hidden" name="old_avatar" value="{{ $basicProfile->avatar }}">
@@ -79,7 +79,10 @@
           <button type="submit" class="btn btn-primary btn-round w-100" name="button" style="margin:30px 0 0 0; width:100%;">Simpan</button>
         </form>
 
-      </div>
+        </div>
+        <button type="submit" class="btn btn-info rounded-corner2" name="button" style="margin:30px 0 0 0; width:100%;">Simpan</button>
+      </form>
+
     </div>
   </div>
 
@@ -89,13 +92,13 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="modalLabel">Crop image</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
+                    <span aria-hidden="true">X</span>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="img-container">
                     <div class="row">
-                        <div class="col-md-8">  
+                        <div class="col-md-8">
                             <!--  default image where we will set the src via jquery-->
                             <img class="img-cropper" id="image">
                         </div>
@@ -120,7 +123,7 @@
     var bs_modal = $('#modal-img-crop');
     var image = document.getElementById('image');
     var cropper,reader,file;
-   
+
 
     $("body").on("change", ".image", function(e) {
         var files = e.target.files;

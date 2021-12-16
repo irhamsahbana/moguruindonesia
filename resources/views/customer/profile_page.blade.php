@@ -13,10 +13,10 @@
                 <h4>{{ $tutor->first_name . ' ' . $tutor->last_name }}</h4>
                 {{-- <h5>Mahasiswa</h5> --}}
                 @if ($userSlug == 'self')
-                  <a class="btn btn-round btn-primary" data-toggle="modal" data-target="#exampleModal" href="#"> Sunting
+                  <a class="btn btn-info rounded-corner2" data-toggle="modal" data-target="#exampleModal" href="#"> Sunting
                     Profil</a>
                 @else
-                  <a class="btn btn-round btn-primary" href="{{ route('direct.order.request', $tutor->slug) }}"> Reservasi Kursus </a>
+                  <a class="btn btn-info rounded-corner2" href="{{ route('direct.order.request', $tutor->slug) }}"> Reservasi Kursus </a>
                 @endif
               </div>
             </div>
@@ -275,8 +275,8 @@
                     placeholder="Nomor HP">
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-round" data-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-primary btn-round">Simpan Perubahan</button>
+                <button type="button" class="btn btn-secondary rounded-corner2" data-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-info rounded-corner2">Simpan Perubahan</button>
               </div>
               </form>
             </div>
