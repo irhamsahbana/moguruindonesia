@@ -12,7 +12,7 @@
             <div class="profile-pict" style="width:100%;">
               <img class="rounded-corner" src="{{ asset('assets/img') }}/no-photo.png" alt="">
               <div class="file-group file-group-inline" style="margin-left:auto; margin-right:auto; margin-top:20px; width:100%;">
-                <button class="btn btn-info btn-round file-browser" style="width:100%;" type="button">Ganti Foto</button>
+                <button class="btn btn-primary rounded-corner2 file-browser" style="width:100%;" type="button">Ganti Foto</button>
                 <input type="file" name="avatar">
               </div>
             </div>
@@ -65,7 +65,7 @@
           </div>
 
         </div>
-        <button type="submit" class="btn btn-primary btn-round w-100" name="button" style="margin:30px 0 0 0; width:100%;">Simpan</button>
+        <button type="submit" class="btn btn-info rounded-corner2" name="button" style="margin:30px 0 0 0; width:100%;">Simpan</button>
       </form>
 
     </div>

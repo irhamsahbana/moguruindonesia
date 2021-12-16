@@ -18,10 +18,12 @@ use App\Http\Controllers\TutorDashboardController;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
-
 // for unauthenticate user (not login or authenticated)
 Route::middleware(['guest'])->group(function () {
     Route::get('login', [AuthController::class, 'login'])->name('auth.login');
