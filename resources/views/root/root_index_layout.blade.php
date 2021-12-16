@@ -68,7 +68,7 @@ src="http://thetheme.io/theadmin/samples/invoicer/../../assets/vendor/bootstrap-
 
       <div class="topbar-right" style="width:100%; padding: 0 0 0 10px;">
 
-        <p class="nav-item"> <a class="nav-link btn btn-info rounded-corner2" href="" style="color: white;"> Masuk </a>
+        <p class="nav-item"> <a class="nav-link btn btn-info rounded-corner2" href="{{ route('auth.login') }}" style="color: white;"> Masuk </a>
         </p>
         <p class="nav-item"> <a class="nav-link " href=""> Kontak Kami </a>
         </p>

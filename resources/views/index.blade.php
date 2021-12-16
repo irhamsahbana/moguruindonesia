@@ -110,10 +110,6 @@
                   <h4> <strong>Anda bisa memilih metode pembelajaran sesuai keinginan anda, mau online atau offline semua bisa </strong> </h4>
                 </div>
 
-                
-
-                
-
               </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
