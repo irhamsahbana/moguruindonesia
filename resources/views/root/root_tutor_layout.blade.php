@@ -3,7 +3,7 @@
 
 <script
       src="http://thetheme.io/theadmin/samples/invoicer/../../assets/vendor/bootstrap-select/js/bootstrap-select.min.js">
-</script>___scripts_1______scripts_2___
+</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="TheAdmin - Responsive admin and web application ui kit">

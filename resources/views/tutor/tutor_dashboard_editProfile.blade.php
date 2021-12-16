@@ -16,9 +16,9 @@
             <div class="col-lg-3 col-md-3 col-sm-12">
               <div class="profile-pict" style="width:100%;">
                 @if ($basicProfile->avatar)
-                    <img class="rounded-corner" src="{{ asset('avatar/'.$basicProfile->avatar) }}" alt="">
+                    <img class="rounded-corner cropper-preview" src="{{ asset('avatar/'.$basicProfile->avatar) }}" alt="">
                 @else
-                    <img class="rounded-corner" src="{{ asset('assets/img') }}/no-photo.png" alt="">
+                    <img class="rounded-corner cropper-preview" src="{{ asset('assets/img') }}/no-photo.png" alt="">
                 @endif
                 <div class="file-group file-group-inline" style="margin-left:auto; margin-right:auto; margin-top:20px; width:100%;">
                   <button class="btn btn-info btn-round file-browser" style="width:100%;" type="button">Ganti Foto</button>
@@ -169,6 +169,7 @@
             reader.onloadend = function() {
                var base64data = reader.result;
                $('#base64image').val(base64data);
+               $('.cropper-preview').attr("src", base64data);
                bs_modal.modal('hide');
             }
         });
